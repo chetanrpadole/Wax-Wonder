@@ -386,12 +386,12 @@
 /* Mobile */
 @media (max-width: 768px) {
   .hero-minimal {
-    padding: 2.5rem 1.25rem;
+    padding: 2rem 1rem;
   }
 
   .hero-minimal__container {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.75rem;
     text-align: center;
   }
 
@@ -399,37 +399,104 @@
     align-items: center;
   }
 
+  .hero-minimal__eyebrow {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-minimal__title {
+    font-size: clamp(1.9rem, 7vw, 2.5rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-minimal__tagline {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
   .hero-minimal__image-frame {
-    max-width: 300px;
+    max-width: 260px;
     margin: 0 auto;
   }
 
   .collections-section {
-    padding: 2rem 1.25rem;
+    padding: 2rem 1rem;
   }
 
-  .collections-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .featured-section {
-    padding: 2rem 1.25rem;
-  }
-}
-
-/* Small mobile */
-@media (max-width: 520px) {
   .collections-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
   }
 
+  .collections-grid .collection-tile:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+  .featured-section {
+    padding: 2rem 1rem;
+  }
+
   .featured-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .featured-card__details {
+    padding: 0.75rem 0.65rem;
+  }
+
+  .featured-card__name {
+    font-size: 0.88rem;
+    line-height: 1.25;
+    min-height: 2.2em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .featured-card__price {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .featured-card__btn {
+    padding: 0.45rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .hero-minimal {
+    padding: 1.75rem 0.75rem;
+  }
+
+  .hero-minimal__title {
+    font-size: 1.75rem;
+  }
+
+  .hero-minimal__tagline {
+    font-size: 0.88rem;
+  }
+
+  .hero-minimal__btn {
+    padding: 0.75rem 1.6rem;
+    font-size: 0.85rem;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .collections-grid {
+    gap: 0.6rem;
   }
 
   .collection-tile__name {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .featured-grid {
+    gap: 0.6rem;
   }
 }

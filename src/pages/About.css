@@ -180,3 +180,39 @@
     order: -1;
   }
 }
+
+@media (max-width: 640px) {
+  .about-page {
+    padding: var(--space-lg) 0 var(--space-2xl);
+  }
+
+  .about-header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .about-story,
+  .about-craft {
+    gap: var(--space-xl);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .about-story__content h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-values-section {
+    padding: var(--space-xl) var(--space-md);
+    margin-bottom: var(--space-2xl);
+    border-radius: var(--radius-lg);
+  }
+
+  .about-values-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .about-value-card {
+    padding: var(--space-lg) var(--space-md);
+  }
+}

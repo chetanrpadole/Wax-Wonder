@@ -95,28 +95,58 @@ const Navbar = () => {
 
       {/* Mobile Panel */}
       <div className={`navbar__mobile-panel ${menuOpen ? 'navbar__mobile-panel--open' : ''}`}>
+        <div className="navbar__mobile-header">
+          <div className="navbar__brand">
+            <span className="navbar__brand-name">Wrapped In Love</span>
+            <span className="navbar__brand-sub">Gifting Atelier</span>
+          </div>
+          <button
+            className="navbar__mobile-close"
+            onClick={() => setMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            <X size={22} />
+          </button>
+        </div>
+
         <ul className="navbar__mobile-links">
           {navLinks.map(({ to, label }) => (
             <li key={to}>
               <NavLink
                 to={to}
-                className="navbar__mobile-link"
+                className={({ isActive }) =>
+                  `navbar__mobile-link ${isActive ? 'navbar__mobile-link--active' : ''}`
+                }
                 onClick={() => setMenuOpen(false)}
+                end={to === '/'}
               >
                 {label}
               </NavLink>
             </li>
           ))}
           <li>
-            <Link
+            <NavLink
               to="/cart"
-              className="navbar__mobile-link"
+              className={({ isActive }) =>
+                `navbar__mobile-link ${isActive ? 'navbar__mobile-link--active' : ''}`
+              }
               onClick={() => setMenuOpen(false)}
             >
-              Cart {itemCount > 0 && `(${itemCount})`}
-            </Link>
+              Cart {itemCount > 0 && <span className="navbar__mobile-cart-badge">{itemCount}</span>}
+            </NavLink>
           </li>
         </ul>
+
+        <div className="navbar__mobile-footer">
+          <a
+            href="https://wa.me/917378670106?text=Hi%20Wrapped%20In%20Love!%20I%20have%20an%20inquiry."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="navbar__mobile-whatsapp"
+          >
+            Chat with Artisan on WhatsApp
+          </a>
+        </div>
       </div>
     </nav>
   );
