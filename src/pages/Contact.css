@@ -20,18 +20,17 @@
   color: var(--clr-text-muted);
 }
 
-/* Contact Grid */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: var(--space-2xl);
-  align-items: start;
-}
-
-/* Info Cards Column */
-.contact-info-panel {
+.contact-container {
+  max-width: 820px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.contact-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-md);
 }
 
@@ -44,6 +43,10 @@
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-lg);
   transition: var(--transition);
+}
+
+.contact-card--full {
+  grid-column: 1 / -1;
 }
 
 .contact-card:hover {
@@ -90,7 +93,7 @@
 
 /* WhatsApp Direct Card */
 .contact-whatsapp-card {
-  padding: var(--space-xl);
+  padding: var(--space-2xl);
   background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
   color: #ffffff;
   border-radius: var(--radius-xl);
@@ -100,20 +103,22 @@
 
 .contact-whatsapp-card h3 {
   color: #ffffff;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin-bottom: var(--space-xs);
 }
 
 .contact-whatsapp-card p {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.92rem;
-  margin-bottom: var(--space-md);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.98rem;
+  margin-bottom: var(--space-lg);
 }
 
 .contact-whatsapp-card .btn {
   background: #ffffff;
   color: #128C7E;
   font-weight: 600;
+  padding: 0.75rem 1.8rem;
+  display: inline-flex;
 }
 
 .contact-whatsapp-card .btn:hover {
@@ -121,47 +126,8 @@
   color: #0b5e54;
 }
 
-/* Form Panel */
-.contact-form-panel {
-  background: var(--clr-bg-card);
-  padding: var(--space-2xl);
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--clr-border);
-  box-shadow: var(--shadow-sm);
-}
-
-.contact-form-panel h2 {
-  font-size: 1.6rem;
-  margin-bottom: var(--space-xs);
-  color: var(--clr-brown);
-}
-
-.contact-form-panel p {
-  font-size: 0.92rem;
-  color: var(--clr-text-muted);
-  margin-bottom: var(--space-lg);
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-}
-
-.contact-success {
-  padding: var(--space-md);
-  background: rgba(37, 211, 102, 0.15);
-  border: 1px solid rgba(37, 211, 102, 0.3);
-  border-radius: var(--radius-md);
-  color: #1e7e34;
-  font-size: 0.92rem;
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-}
-
-@media (max-width: 850px) {
-  .contact-grid {
+@media (max-width: 680px) {
+  .contact-cards-grid {
     grid-template-columns: 1fr;
   }
 }

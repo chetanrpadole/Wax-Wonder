@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   MapPin,
   Phone,
   Mail,
   Clock,
-  Send,
-  CheckCircle,
   MessageCircle,
   Sparkles
 } from 'lucide-react';
@@ -13,32 +11,6 @@ import { InstagramIcon } from '../components/Icons';
 import './Contact.css';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-  });
-
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Generate WhatsApp forward for immediate response
-    const text = `*New Contact Enquiry — Wrapped In Love*\n*From:* ${formData.name}\n*Email:* ${formData.email}\n*Phone:* ${formData.phone || 'N/A'}\n*Subject:* ${formData.subject}\n*Message:* ${formData.message}`;
-    const url = `https://wa.me/917378670106?text=${encodeURIComponent(text)}`;
-
-    setSubmitted(true);
-    window.open(url, '_blank');
-  };
-
   return (
     <div className="contact-page" id="contact-page">
       <div className="container">
@@ -55,9 +27,8 @@ const Contact = () => {
           </p>
         </header>
 
-        <div className="contact-grid">
-          {/* Info Panels */}
-          <div className="contact-info-panel">
+        <div className="contact-container">
+          <div className="contact-cards-grid">
             <div className="contact-card">
               <div className="contact-card__icon">
                 <MapPin size={22} />
@@ -124,7 +95,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="contact-card">
+            <div className="contact-card contact-card--full">
               <div className="contact-card__icon">
                 <Clock size={22} />
               </div>
@@ -136,114 +107,21 @@ const Contact = () => {
                 </p>
               </div>
             </div>
-
-            {/* WhatsApp Highlight banner */}
-            <div className="contact-whatsapp-card">
-              <MessageCircle size={32} style={{ marginBottom: '0.5rem' }} />
-              <h3>Need a Quick Response?</h3>
-              <p>Chat directly with our artisan on WhatsApp for instant assistance.</p>
-              <a
-                href="https://wa.me/917378670106?text=Hi%20Wrapped%20In%20Love!%20I%20have%20an%20inquiry."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-              >
-                Chat on WhatsApp Now
-              </a>
-            </div>
           </div>
 
-          {/* Form */}
-          <div className="contact-form-panel">
-            <h2>Send Us a Message</h2>
-            <p>Fill out the note below and we&apos;ll get back to you promptly.</p>
-
-            {submitted && (
-              <div className="contact-success" style={{ marginBottom: '1.5rem' }}>
-                <CheckCircle size={18} />
-                <span>Thank you! Your message has been prepared for WhatsApp chat.</span>
-              </div>
-            )}
-
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="contact-name">Your Name *</label>
-                <input
-                  type="text"
-                  id="contact-name"
-                  name="name"
-                  required
-                  placeholder="e.g. Aditi Sharma"
-                  className="form-control"
-                  value={formData.name}
-                  onChange={handleChange}
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="contact-email">Email Address *</label>
-                <input
-                  type="email"
-                  id="contact-email"
-                  name="email"
-                  required
-                  placeholder="e.g. aditi@example.com"
-                  className="form-control"
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="contact-phone">Phone Number (optional)</label>
-                <input
-                  type="tel"
-                  id="contact-phone"
-                  name="phone"
-                  placeholder="e.g. +91 98765 43210"
-                  className="form-control"
-                  value={formData.phone}
-                  onChange={handleChange}
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="contact-subject">Subject *</label>
-                <input
-                  type="text"
-                  id="contact-subject"
-                  name="subject"
-                  required
-                  placeholder="e.g. Bulk order for wedding favours"
-                  className="form-control"
-                  value={formData.subject}
-                  onChange={handleChange}
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="contact-message">Message *</label>
-                <textarea
-                  id="contact-message"
-                  name="message"
-                  required
-                  rows={5}
-                  placeholder="Tell us what you are looking for..."
-                  className="form-control"
-                  value={formData.message}
-                  onChange={handleChange}
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="btn btn--primary"
-                style={{ alignSelf: 'flex-start', marginTop: '0.5rem' }}
-                id="contact-submit-btn"
-              >
-                <Send size={16} /> Send Message
-              </button>
-            </form>
+          {/* WhatsApp Highlight banner */}
+          <div className="contact-whatsapp-card">
+            <MessageCircle size={32} style={{ marginBottom: '0.5rem' }} />
+            <h3>Need a Quick Response?</h3>
+            <p>Chat directly with our artisan on WhatsApp for instant assistance.</p>
+            <a
+              href="https://wa.me/917378670106?text=Hi%20Wrapped%20In%20Love!%20I%20have%20an%20inquiry."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              Chat on WhatsApp Now
+            </a>
           </div>
         </div>
       </div>
