@@ -4,12 +4,12 @@ import { ArrowRight } from 'lucide-react';
 import { products } from '../data/products';
 import './Home.css';
 
-// Original images
-import teddyCandle from '../assets/images/teddy-candle.jpg';
-import flowerCandle from '../assets/images/flower-candle.jpg';
-import giftCandle from '../assets/images/gift-candle.jpg';
-import candleBouquet from '../assets/images/candle-bouquet.jpg';
-import giftHamper from '../assets/images/gift-hamper.jpg';
+// Real collection images
+import teddyCandle from '../assets/images/03_teddy_bear_candle.jpg';
+import flowerCandle from '../assets/images/04_peony_candle.jpg';
+import giftCandle from '../assets/images/02_bell_jar_candle.jpg';
+import candleBouquet from '../assets/images/26_candle_bouquet.jpg';
+import giftHamper from '../assets/images/18_hamper_bouquet.png';
 
 // Curated collections data with original images
 const collections = [
@@ -113,7 +113,10 @@ const Home = () => {
                   <h3 className="featured-card__name">
                     <Link to={`/product/${product.id}`}>{product.name}</Link>
                   </h3>
-                  <span className="featured-card__price">₹{product.price}</span>
+                  <span className="featured-card__price">
+                    ₹{product.price}
+                    {product.unit && <span className="featured-card__unit"> · {product.unit}</span>}
+                  </span>
                   <Link
                     to={`/product/${product.id}`}
                     className="btn btn--outline featured-card__btn"

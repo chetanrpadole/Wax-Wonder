@@ -1,212 +1,393 @@
-// Product images — import the ones we have, null for placeholders
-import teddyCandle from '../assets/images/teddy-candle.jpg';
-import flowerCandle from '../assets/images/flower-candle.jpg';
-import giftHamper from '../assets/images/gift-hamper.jpg';
-import candleBouquet from '../assets/images/candle-bouquet.jpg';
-import giftCandle from '../assets/images/gift-candle.jpg';
-import customGift from '../assets/images/custom-gift.jpg';
+// 34 Product images mapped to catalog
+import img01 from '../assets/images/01_ladoo_candle.jpg';
+import img02 from '../assets/images/02_bell_jar_candle.jpg';
+import img03 from '../assets/images/03_teddy_bear_candle.jpg';
+import img04 from '../assets/images/04_peony_candle.jpg';
+import img05 from '../assets/images/05_mithai_platter_candle.jpg';
+import img06 from '../assets/images/06_modak_candle.jpg';
+import img07 from '../assets/images/07_urli_candle.jpg';
+import img08 from '../assets/images/08_ocean_breeze_shell_candle.jpg';
+import img09 from '../assets/images/09_shell_candle.jpg';
+import img10 from '../assets/images/10_rich_divine_candle.jpg';
+import img11 from '../assets/images/11_peacock_urli_candle.jpg';
+import img12 from '../assets/images/12_coffee_latte_scented_candle.jpg';
+import img13 from '../assets/images/13_rasmalai_candle.jpg';
+import img14 from '../assets/images/14_creamy_daisy.jpg';
+import img15 from '../assets/images/15_peony_flower_bouquet.jpg';
+import img16 from '../assets/images/16_laddu_candle.jpg';
+import img17 from '../assets/images/17_glitter_jar_candle.png';
+import img18 from '../assets/images/18_hamper_bouquet.png';
+import img19 from '../assets/images/19_heart_jar_candle.png';
+import img20 from '../assets/images/20_wooden_round.jpg';
+import img21 from '../assets/images/21_cristal_jar_250_ml.png';
+import img22 from '../assets/images/22_daisy_candles.jpg';
+import img23 from '../assets/images/23_daisy_bouquets.jpg';
+import img24 from '../assets/images/24_flower_bouquet.jpg';
+import img25 from '../assets/images/25_blossom_glow_candle_bouquet.jpg';
+import img26 from '../assets/images/26_candle_bouquet.jpg';
+import img27 from '../assets/images/27_wine_candle.jpg';
+import img28 from '../assets/images/28_mini_candle_jar.jpg';
+import img29 from '../assets/images/29_heart_candle_jar.jpg';
+import img30 from '../assets/images/30_christmas_tree_candle.jpg';
+import img31 from '../assets/images/31_christmas_jar.jpg';
+import img32 from '../assets/images/32_santa_candle.jpg';
+import img33 from '../assets/images/33_mandala_tin_jar.jpg';
+import img34 from '../assets/images/34_starfish_candle.jpg';
 
 export const products = [
-  // Teddy Candles
   {
     id: 1,
-    name: 'Classic Teddy Bear Candle',
-    price: 349,
-    category: 'Teddy Candles',
-    occasion: ['Birthday Gifts', 'Personalized Gifts'],
-    description: 'An adorable handcrafted teddy bear candle in soft cream, perfect for gifting on birthdays and special occasions. Made with premium soy wax.',
-    image: teddyCandle,
+    name: 'Ladoo Candle',
+    price: 149,
+    unit: '4 units',
+    category: 'Festival Collection',
+    occasion: ['Festival Gifts', 'Personalized Gifts'],
+    description: 'Festive handcrafted ladoo candles in a pack of 4. Perfect for Diwali, festive home décor, and auspicious gifting.',
+    image: img01,
     badge: 'Bestseller',
   },
   {
     id: 2,
-    name: 'Mini Teddy Candle Set',
-    price: 499,
-    category: 'Teddy Candles',
-    occasion: ['Birthday Gifts'],
-    description: 'A set of 3 mini teddy bear candles in pastel shades. Perfect for party favours or small gifts.',
-    image: null, // Add your image
+    name: 'Bell jar Candle',
+    price: 349,
+    category: 'Gift Candles',
+    occasion: ['Birthday Gifts', 'Anniversary Gifts'],
+    description: 'An elegant candle enclosed in a premium glass bell jar cloche. Adds timeless warmth and sophistication to any sanctuary.',
+    image: img02,
     badge: null,
   },
-  // Flower Candles
   {
     id: 3,
-    name: 'Rose Petal Candle',
-    price: 299,
-    category: 'Flower Candles',
-    occasion: ['Anniversary Gifts', 'Wedding Favours'],
-    description: 'A delicate rose-shaped candle in soft blush pink. Handcrafted with love, perfect for romantic occasions.',
-    image: flowerCandle,
+    name: 'Teddy Bear Candle',
+    price: 149,
+    category: 'Teddy Candles',
+    occasion: ['Birthday Gifts', 'Personalized Gifts'],
+    description: 'An adorable handcrafted teddy bear candle made with organic soy wax. A heartwarming gift for loved ones.',
+    image: img03,
     badge: 'Bestseller',
   },
   {
     id: 4,
-    name: 'Sunflower Candle',
-    price: 279,
+    name: 'Peony Candle',
+    price: 99,
     category: 'Flower Candles',
-    occasion: ['Birthday Gifts'],
-    description: 'A cheerful sunflower candle to brighten anyone\'s day. Made with natural soy wax and a cotton wick.',
-    image: null, // Add your image
-    badge: 'New',
+    occasion: ['Anniversary Gifts', 'Wedding Favours'],
+    description: 'A delicate peony flower candle with intricately layered petals. Handcrafted to bring gentle romance to your space.',
+    image: img04,
+    badge: null,
   },
   {
     id: 5,
-    name: 'Lavender Bloom Candle',
-    price: 319,
-    category: 'Flower Candles',
-    occasion: ['Personalized Gifts'],
-    description: 'A beautiful lavender flower candle with a subtle fragrance. A perfect addition to any home décor.',
-    image: null, // Add your image
-    badge: null,
+    name: 'Mithai Platter Candle',
+    price: 299,
+    category: 'Festival Collection',
+    occasion: ['Festival Gifts'],
+    description: 'A realistic artisanal Indian mithai platter candle. A delightful festive centerpiece and unique conversation starter.',
+    image: img05,
+    badge: 'Seasonal',
   },
-  // Gift Candles
   {
     id: 6,
-    name: 'Premium Jar Candle',
-    price: 599,
-    category: 'Gift Candles',
-    occasion: ['Birthday Gifts', 'Anniversary Gifts', 'Corporate Gifts'],
-    description: 'An elegant glass jar candle with a gold lid and satin ribbon. Long-lasting soy wax with a warm vanilla scent.',
-    image: giftCandle,
-    badge: 'Bestseller',
+    name: 'Modak Candle',
+    price: 149,
+    unit: '4 units',
+    category: 'Festival Collection',
+    occasion: ['Festival Gifts'],
+    description: 'Traditional handcrafted modak candles in a pack of 4. Blessed fragrance and auspicious charm for festive celebrations.',
+    image: img06,
+    badge: null,
   },
   {
     id: 7,
-    name: 'Scented Pillar Candle',
-    price: 449,
-    category: 'Gift Candles',
-    occasion: ['Festival Gifts'],
-    description: 'A beautifully crafted pillar candle with a warm amber fragrance. Ideal for home décor and festive gifting.',
-    image: null, // Add your image
+    name: 'Urli Candle',
+    price: 239,
+    category: 'Festival Collection',
+    occasion: ['Festival Gifts', 'Wedding Favours'],
+    description: 'Exquisite traditional urli candle with floral accents. Creates an enchanting welcoming glow for festive evenings.',
+    image: img07,
     badge: null,
   },
   {
     id: 8,
-    name: 'Heart Shaped Candle',
-    price: 249,
+    name: 'Ocean Breeze shell Candle',
+    price: 139,
     category: 'Gift Candles',
-    occasion: ['Anniversary Gifts', 'Wedding Favours'],
-    description: 'A romantic heart-shaped candle in blush pink. A sweet token of love for your special someone.',
-    image: null, // Add your image
-    badge: null,
+    occasion: ['Birthday Gifts', 'Personalized Gifts'],
+    description: 'Refreshing ocean-inspired seashell candle infused with crisp aquatic notes for calming coastal relaxation.',
+    image: img08,
+    badge: 'New',
   },
-  // Candle Bouquets
   {
     id: 9,
-    name: 'Classic Candle Bouquet',
-    price: 1299,
-    category: 'Candle Bouquets',
-    occasion: ['Birthday Gifts', 'Anniversary Gifts'],
-    description: 'A stunning bouquet of handmade flower candles wrapped in kraft paper with a satin ribbon. A unique and lasting gift.',
-    image: candleBouquet,
-    badge: 'Bestseller',
+    name: 'Shell Candle',
+    price: 199,
+    category: 'Gift Candles',
+    occasion: ['Anniversary Gifts', 'Personalized Gifts'],
+    description: 'Artistically molded seashell candle with textured detailing. A chic and aesthetic home décor accent.',
+    image: img09,
+    badge: null,
   },
   {
     id: 10,
-    name: 'Mini Candle Bouquet',
-    price: 799,
-    category: 'Candle Bouquets',
-    occasion: ['Birthday Gifts', 'Wedding Favours'],
-    description: 'A petite bouquet of 5 flower candles in pastel shades. Perfect for intimate celebrations.',
-    image: null, // Add your image
-    badge: 'New',
+    name: 'Rich Divine Candle',
+    price: 149,
+    category: 'Gift Candles',
+    occasion: ['Festival Gifts', 'Corporate Gifts'],
+    description: 'Deeply aromatic soy candle crafted for divine serenity and calming peaceful meditation spaces.',
+    image: img10,
+    badge: null,
   },
-  // Gift Hampers
   {
     id: 11,
-    name: 'Premium Gift Hamper',
-    price: 2499,
-    category: 'Gift Hampers',
-    occasion: ['Birthday Gifts', 'Anniversary Gifts', 'Festival Gifts'],
-    description: 'A luxurious gift hamper with handmade candles, dried flowers, and beautifully wrapped surprises. The ultimate gifting experience.',
-    image: giftHamper,
+    name: 'Peacock urli Candle',
+    price: 349,
+    category: 'Festival Collection',
+    occasion: ['Festival Gifts', 'Wedding Favours'],
+    description: 'Regal peacock-themed decorative urli candle. Adds ethnic elegance and warm festive illumination.',
+    image: img11,
     badge: 'Bestseller',
   },
   {
     id: 12,
-    name: 'Celebration Hamper',
-    price: 1799,
-    category: 'Gift Hampers',
-    occasion: ['Birthday Gifts', 'Festival Gifts'],
-    description: 'A curated celebration hamper with candles, chocolates, and dried flower arrangements. Perfect for any festive occasion.',
-    image: null, // Add your image
-    badge: null,
+    name: 'Coffee Latte Scented Candle',
+    price: 299,
+    category: 'Gift Candles',
+    occasion: ['Birthday Gifts', 'Personalized Gifts'],
+    description: 'Indulgent aroma of freshly brewed espresso with rich creamy vanilla froth. The ultimate coffee lover\'s treat.',
+    image: img12,
+    badge: 'Bestseller',
   },
-  // Festival Collection
   {
     id: 13,
-    name: 'Diwali Special Set',
-    price: 899,
+    name: 'Rasmalai Candle',
+    price: 149,
     category: 'Festival Collection',
     occasion: ['Festival Gifts'],
-    description: 'A festive collection of decorative diyas and candles with gold accents. Spread light and joy this Diwali.',
-    image: null, // Add your image
+    description: 'Decadent dessert-inspired candle shaped and scented like rich cardamom and saffron rasmalai.',
+    image: img13,
     badge: 'Seasonal',
   },
   {
     id: 14,
-    name: 'Rakhi Gift Box',
-    price: 699,
-    category: 'Festival Collection',
-    occasion: ['Festival Gifts', 'Personalized Gifts'],
-    description: 'A specially curated Rakhi gift box with a handmade candle, rakhi, and sweets packaging. Show your sibling you care.',
-    image: null, // Add your image
-    badge: 'Seasonal',
+    name: 'Creamy Daisy',
+    price: 199,
+    category: 'Flower Candles',
+    occasion: ['Birthday Gifts', 'Anniversary Gifts'],
+    description: 'A soft creamy daisy blossom candle bringing cheerful botanical beauty and a soothing subtle fragrance.',
+    image: img14,
+    badge: null,
   },
-  // Corporate Gifts
   {
     id: 15,
-    name: 'Corporate Gift Set',
-    price: 1499,
-    category: 'Corporate Gifts',
-    occasion: ['Corporate Gifts'],
-    description: 'An elegant corporate gift set with premium jar candles and branded packaging. Ideal for employee appreciation and client gifts.',
-    image: null, // Add your image
-    badge: null,
+    name: 'Peony Flower Bouquet',
+    price: 139,
+    category: 'Candle Bouquets',
+    occasion: ['Birthday Gifts', 'Anniversary Gifts', 'Wedding Favours'],
+    description: 'Charming petite bouquet featuring handcrafted peony flower candles wrapped in artisanal paper.',
+    image: img15,
+    badge: 'New',
   },
   {
     id: 16,
-    name: 'Bulk Event Favours',
-    price: 199,
-    category: 'Corporate Gifts',
-    occasion: ['Corporate Gifts', 'Wedding Favours'],
-    description: 'Customizable mini candle favours for events, weddings, and corporate gatherings. Minimum order of 25 pieces.',
-    image: null, // Add your image
+    name: 'Laddu candle',
+    price: 150,
+    unit: '4 units',
+    category: 'Festival Collection',
+    occasion: ['Festival Gifts'],
+    description: 'Set of 4 golden laddu candles handcrafted with premium soy wax. A radiant festive favorite.',
+    image: img16,
     badge: null,
   },
-  // Custom Gifts
   {
     id: 17,
-    name: 'Custom Gift Box',
-    price: 1999,
-    category: 'Custom Gifts',
-    occasion: ['Birthday Gifts', 'Anniversary Gifts', 'Personalized Gifts'],
-    description: 'A fully personalized gift box curated just for your loved one. Choose the candle, packaging, and add a personal message.',
-    image: customGift,
-    badge: 'Popular',
+    name: 'Glitter jar candle',
+    price: 249,
+    category: 'Gift Candles',
+    occasion: ['Birthday Gifts', 'Festival Gifts'],
+    description: 'Sparkling glass jar candle with shimmer finish and soothing fragrance. Perfect for celebratory evenings.',
+    image: img17,
+    badge: null,
   },
   {
     id: 18,
-    name: 'Personalized Name Candle',
-    price: 549,
-    category: 'Custom Gifts',
-    occasion: ['Birthday Gifts', 'Personalized Gifts'],
-    description: 'A custom candle with the name or message of your choice engraved on it. A truly personal gift.',
-    image: null, // Add your image
+    name: 'Hamper bouquet',
+    price: 400,
+    category: 'Gift Hampers',
+    occasion: ['Birthday Gifts', 'Anniversary Gifts'],
+    description: 'A curated combination of botanical flower candle bouquet and luxury gift packaging.',
+    image: img18,
+    badge: 'Bestseller',
+  },
+  {
+    id: 19,
+    name: 'Heart jar candle',
+    price: 199,
+    category: 'Gift Candles',
+    occasion: ['Anniversary Gifts', 'Wedding Favours'],
+    description: 'Romantic heart-motif jar candle filled with slow-burning fragrant wax. Express love with every glow.',
+    image: img19,
     badge: null,
+  },
+  {
+    id: 20,
+    name: 'Wooden Round',
+    price: 320,
+    category: 'Gift Candles',
+    occasion: ['Personalized Gifts', 'Corporate Gifts'],
+    description: 'Rustic wooden slice candle base holding an all-natural soy candle. Earthy, organic, and minimalist.',
+    image: img20,
+    badge: null,
+  },
+  {
+    id: 21,
+    name: 'Cristal jar 250 ml',
+    price: 399,
+    category: 'Gift Candles',
+    occasion: ['Anniversary Gifts', 'Corporate Gifts'],
+    description: 'A 250ml crystal-cut faceted glass jar candle with luxurious shimmer and lingering aroma.',
+    image: img21,
+    badge: 'Bestseller',
+  },
+  {
+    id: 22,
+    name: 'Daisy candles',
+    price: 30,
+    category: 'Flower Candles',
+    occasion: ['Birthday Gifts', 'Wedding Favours'],
+    description: 'Delicate miniature daisy blossom candle. Perfect for party favors, desk decor, and sweet tokens.',
+    image: img22,
+    badge: null,
+  },
+  {
+    id: 23,
+    name: 'Daisy Bouquets',
+    price: 99,
+    category: 'Candle Bouquets',
+    occasion: ['Birthday Gifts', 'Wedding Favours'],
+    description: 'Cheerful daisy candle bouquet wrapped in eco-friendly paper. A lasting botanical delight.',
+    image: img23,
+    badge: null,
+  },
+  {
+    id: 24,
+    name: 'Flower Bouquet',
+    price: 750,
+    category: 'Candle Bouquets',
+    occasion: ['Anniversary Gifts', 'Birthday Gifts'],
+    description: 'A grand luxury candle bouquet with assorted floral blossoms, dried accents, and satin ribbon wrap.',
+    image: img24,
+    badge: 'Bestseller',
+  },
+  {
+    id: 25,
+    name: 'Blossom Glow Candle Bouquet',
+    price: 499,
+    category: 'Candle Bouquets',
+    occasion: ['Birthday Gifts', 'Anniversary Gifts'],
+    description: 'A radiant blooming candle bouquet featuring pastel flower candles and a warm luminous scent.',
+    image: img25,
+    badge: 'New',
+  },
+  {
+    id: 26,
+    name: 'Candle Bouquet',
+    price: 849,
+    category: 'Candle Bouquets',
+    occasion: ['Anniversary Gifts', 'Wedding Favours', 'Personalized Gifts'],
+    description: 'Signature premium candle bouquet meticulously handcrafted for unforgettable gifting moments.',
+    image: img26,
+    badge: 'Bestseller',
+  },
+  {
+    id: 27,
+    name: 'Wine Candle',
+    price: 449,
+    category: 'Gift Candles',
+    occasion: ['Anniversary Gifts', 'Corporate Gifts'],
+    description: 'Sophisticated wine-glass candle infused with notes of rich berries and vineyard warmth.',
+    image: img27,
+    badge: null,
+  },
+  {
+    id: 28,
+    name: 'Mini candle jar',
+    price: 149,
+    category: 'Gift Candles',
+    occasion: ['Wedding Favours', 'Birthday Gifts'],
+    description: 'Charming mini glass jar candle with clean-burning soy wax. Ideal for wedding favors and gift bags.',
+    image: img28,
+    badge: null,
+  },
+  {
+    id: 29,
+    name: 'Heart candle jar',
+    price: 249,
+    category: 'Gift Candles',
+    occasion: ['Anniversary Gifts', 'Personalized Gifts'],
+    description: 'Heart-shaped artisan candle jar with delicate rose-tinted fragrance and satin ribbon finish.',
+    image: img29,
+    badge: null,
+  },
+  {
+    id: 30,
+    name: 'Christmas tree Candle',
+    price: 119,
+    category: 'Festival Collection',
+    occasion: ['Festival Gifts'],
+    description: 'Festive sculpted Christmas tree candle bringing pine freshness and cozy winter holiday cheer.',
+    image: img30,
+    badge: 'Seasonal',
+  },
+  {
+    id: 31,
+    name: 'Christmas jar',
+    price: 169,
+    category: 'Festival Collection',
+    occasion: ['Festival Gifts'],
+    description: 'Holiday special decorative jar candle scented with cinnamon, clove, and warm winter cheer.',
+    image: img31,
+    badge: 'Seasonal',
+  },
+  {
+    id: 32,
+    name: 'Santa candle',
+    price: 129,
+    category: 'Festival Collection',
+    occasion: ['Festival Gifts'],
+    description: 'Jolly handcrafted Santa Claus candle full of festive magic, joy, and cheerful smiles.',
+    image: img32,
+    badge: 'Seasonal',
+  },
+  {
+    id: 33,
+    name: 'Mandala tin jar',
+    price: 169,
+    category: 'Gift Candles',
+    occasion: ['Festival Gifts', 'Corporate Gifts'],
+    description: 'Artistic mandala-print tin jar candle with clean-burning aromatherapy wax and protective lid.',
+    image: img33,
+    badge: null,
+  },
+  {
+    id: 34,
+    name: 'Starfish Candle',
+    price: 199,
+    category: 'Gift Candles',
+    occasion: ['Birthday Gifts', 'Personalized Gifts'],
+    description: 'Charming coastal starfish candle with delicate seaside texture and breezy marine fragrance.',
+    image: img34,
+    badge: 'New',
   },
 ];
 
 export const categories = [
   'All',
+  'Festival Collection',
+  'Gift Candles',
   'Teddy Candles',
   'Flower Candles',
-  'Gift Candles',
   'Candle Bouquets',
   'Gift Hampers',
-  'Festival Collection',
-  'Corporate Gifts',
-  'Custom Gifts',
 ];
 
 export const occasions = [

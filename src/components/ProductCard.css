@@ -101,6 +101,12 @@
   content: '₹';
 }
 
+.product-card__unit {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--clr-text-muted);
+}
+
 .product-card__actions {
   display: flex;
   gap: var(--space-sm);

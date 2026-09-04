@@ -108,6 +108,7 @@ const ProductDetails = () => {
             <h1 className="product-details__title">{product.name}</h1>
             <div className="product-details__price">
               {product.price}
+              {product.unit && <span className="product-details__unit"> · {product.unit}</span>}
               <span className="product-details__tax-note">Inclusive of all taxes</span>
             </div>
 

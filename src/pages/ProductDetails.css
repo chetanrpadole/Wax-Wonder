@@ -116,6 +116,12 @@
   content: '₹';
 }
 
+.product-details__unit {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-text-muted);
+}
+
 .product-details__tax-note {
   font-size: 0.78rem;
   font-weight: normal;

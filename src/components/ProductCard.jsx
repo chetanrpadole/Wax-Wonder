@@ -40,7 +40,10 @@ const ProductCard = ({ product }) => {
         <h3 className="product-card__name">
           <Link to={`/product/${product.id}`}>{product.name}</Link>
         </h3>
-        <span className="product-card__price">{product.price}</span>
+        <span className="product-card__price">
+          {product.price}
+          {product.unit && <span className="product-card__unit"> · {product.unit}</span>}
+        </span>
 
         <div className="product-card__actions">
           <Link to={`/product/${product.id}`} className="btn btn--outline btn--sm">
