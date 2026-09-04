@@ -1,0 +1,167 @@
+/* ── Contact Page ── */
+.contact-page {
+  padding: var(--space-2xl) 0 var(--space-3xl);
+}
+
+.contact-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto var(--space-2xl);
+}
+
+.contact-header h1 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  margin-bottom: var(--space-xs);
+  color: var(--clr-brown);
+}
+
+.contact-header p {
+  font-size: 1.05rem;
+  color: var(--clr-text-muted);
+}
+
+/* Contact Grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+/* Info Cards Column */
+.contact-info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.contact-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+}
+
+.contact-card:hover {
+  border-color: var(--clr-gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-card__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(212, 163, 115, 0.15);
+  color: var(--clr-gold-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-card__title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin-bottom: 2px;
+  color: var(--clr-brown);
+}
+
+.contact-card__text {
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+  line-height: 1.5;
+}
+
+.contact-card__link {
+  color: var(--clr-brown);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.contact-card__link:hover {
+  color: var(--clr-gold-dark);
+}
+
+/* WhatsApp Direct Card */
+.contact-whatsapp-card {
+  padding: var(--space-xl);
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #ffffff;
+  border-radius: var(--radius-xl);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.contact-whatsapp-card h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: var(--space-xs);
+}
+
+.contact-whatsapp-card p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.92rem;
+  margin-bottom: var(--space-md);
+}
+
+.contact-whatsapp-card .btn {
+  background: #ffffff;
+  color: #128C7E;
+  font-weight: 600;
+}
+
+.contact-whatsapp-card .btn:hover {
+  background: var(--clr-ivory);
+  color: #0b5e54;
+}
+
+/* Form Panel */
+.contact-form-panel {
+  background: var(--clr-bg-card);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--clr-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-form-panel h2 {
+  font-size: 1.6rem;
+  margin-bottom: var(--space-xs);
+  color: var(--clr-brown);
+}
+
+.contact-form-panel p {
+  font-size: 0.92rem;
+  color: var(--clr-text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.contact-success {
+  padding: var(--space-md);
+  background: rgba(37, 211, 102, 0.15);
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  border-radius: var(--radius-md);
+  color: #1e7e34;
+  font-size: 0.92rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+@media (max-width: 850px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
