@@ -1,139 +1,86 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {
-  Heart, Gift, Cake, Star, Users, Sparkles,
-  Palette, Package, Award, ArrowRight
-} from 'lucide-react';
-import { InstagramIcon } from '../components/Icons';
-import { products, reviews } from '../data/products';
-import ProductCard from '../components/ProductCard';
+import { ArrowRight } from 'lucide-react';
+import { products } from '../data/products';
 import './Home.css';
 
-// Images for hero
+// Original images
 import teddyCandle from '../assets/images/teddy-candle.jpg';
 import flowerCandle from '../assets/images/flower-candle.jpg';
-import giftHamper from '../assets/images/gift-hamper.jpg';
-import candleBouquet from '../assets/images/candle-bouquet.jpg';
 import giftCandle from '../assets/images/gift-candle.jpg';
+import candleBouquet from '../assets/images/candle-bouquet.jpg';
+import giftHamper from '../assets/images/gift-hamper.jpg';
 
-
-const occasions = [
-  { name: 'Birthday', icon: Cake, link: '/shop?occasion=Birthday+Gifts' },
-  { name: 'Anniversary', icon: Heart, link: '/shop?occasion=Anniversary+Gifts' },
-  { name: 'Wedding', icon: Sparkles, link: '/shop?occasion=Wedding+Favours' },
-  { name: 'Festivals', icon: Star, link: '/shop?occasion=Festival+Gifts' },
-  { name: 'Corporate', icon: Users, link: '/shop?occasion=Corporate+Gifts' },
-  { name: 'Personalized', icon: Palette, link: '/shop?occasion=Personalized+Gifts' },
-];
-
+// Curated collections data with original images
 const collections = [
-  { name: 'Teddy Candles', image: teddyCandle, count: 2, link: '/shop?category=Teddy+Candles' },
-  { name: 'Flower Candles', image: flowerCandle, count: 3, link: '/shop?category=Flower+Candles' },
-  { name: 'Gift Candles', image: giftCandle, count: 3, link: '/shop?category=Gift+Candles' },
-  { name: 'Candle Bouquets', image: candleBouquet, count: 2, link: '/shop?category=Candle+Bouquets' },
-  { name: 'Gift Hampers', image: giftHamper, count: 2, link: '/shop?category=Gift+Hampers' },
+  { name: 'Teddy Candles', image: teddyCandle, link: '/shop?category=Teddy+Candles' },
+  { name: 'Flower Candles', image: flowerCandle, link: '/shop?category=Flower+Candles' },
+  { name: 'Gift Candles', image: giftCandle, link: '/shop?category=Gift+Candles' },
+  { name: 'Candle Bouquets', image: candleBouquet, link: '/shop?category=Candle+Bouquets' },
+  { name: 'Gift Hampers', image: giftHamper, link: '/shop?category=Gift+Hampers' },
 ];
 
-const whyItems = [
-  { icon: Heart, title: 'Handmade with Love', desc: 'Every product is handcrafted with care and attention to detail.' },
-  { icon: Award, title: 'Premium Quality', desc: 'We use only the finest materials — premium wax, natural wicks, and eco-friendly packaging.' },
-  { icon: Palette, title: 'Fully Customizable', desc: 'Choose colors, scents, messages, and packaging to create your perfect gift.' },
-  { icon: Package, title: 'Gift-Ready Packaging', desc: 'Beautiful packaging included — ready to gift straight out of the box.' },
-  { icon: Gift, title: 'Perfect for Gifting', desc: 'From birthdays to corporate events, we have something for every occasion.' },
-  { icon: Users, title: 'Bulk & Corporate', desc: 'Special pricing for bulk orders, corporate events, and wedding favours.' },
-];
-
-const bestSellers = products.filter(p => p.badge === 'Bestseller').slice(0, 4);
-
-// Use available product images for Instagram grid
-const instaImages = [teddyCandle, flowerCandle, giftHamper, candleBouquet];
+// 4 featured products that have images, with original pricing
+const featuredProducts = products.filter((p) => p.image).slice(0, 4);
 
 const Home = () => {
   return (
-    <div className="home" id="home-page">
-      {/* ── 1. Hero ── */}
-      <section className="hero">
-        <div className="container hero__inner">
-          <div className="hero__content">
-            <span className="hero__label">
-              <Sparkles size={14} />
-              Handcrafted in Nagpur
-            </span>
-            <h1 className="hero__title">
-              Handcrafted Gifts<br />
+    <div className="home-minimal" id="home-page">
+      {/* ── Hero Section ── */}
+      <section className="hero-minimal">
+        <div className="hero-minimal__container">
+          <div className="hero-minimal__content">
+            <span className="hero-minimal__eyebrow">Handcrafted Luxury</span>
+            <h1 className="hero-minimal__title">
+              Artisan Candles,<br />
               <span>Wrapped In Love</span>
             </h1>
-            <p className="hero__desc">
-              Beautiful handmade candles, gift hampers, and personalized creations 
-              for your most special moments. Every gift tells a story.
+            <p className="hero-minimal__tagline">
+              Delicately scented, slow-burning handcrafted candles made to bring warmth, serenity, and timeless elegance to your sanctuary.
             </p>
-            <div className="hero__cta">
-              <Link to="/shop" className="btn btn--primary">
+            <div className="hero-minimal__actions">
+              <Link to="/shop" className="btn btn--primary hero-minimal__btn" id="hero-shop-now-btn">
                 Shop Now <ArrowRight size={16} />
               </Link>
-              <Link to="/collections" className="btn btn--outline">
-                Our Collections
-              </Link>
             </div>
           </div>
 
-          <div className="hero__images">
-            <div className="hero__img-card">
-              <img src={teddyCandle} alt="Handmade teddy candle" />
-            </div>
-            <div className="hero__img-card">
-              <img src={flowerCandle} alt="Handmade flower candle" />
-            </div>
-            <div className="hero__img-card">
-              <img src={giftHamper} alt="Premium gift hamper" />
-            </div>
-            <div className="hero__img-card">
-              <img src={candleBouquet} alt="Candle bouquet" />
+          <div className="hero-minimal__media">
+            <div className="hero-minimal__image-frame">
+              <img
+                src={teddyCandle}
+                alt="Handcrafted luxury candle"
+                className="hero-minimal__image"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── 2. Shop By Occasion ── */}
-      <section className="section" id="shop-by-occasion">
-        <div className="container">
-          <div className="section-header">
-            <h2>Shop By Occasion</h2>
-            <div className="divider" />
-            <p>Find the perfect gift for every celebration</p>
+      {/* ── Curated Collections ── */}
+      <section className="collections-section" id="curated-collections">
+        <div className="collections-container">
+          <div className="collections-header">
+            <h2 className="collections-title">Curated Collections</h2>
+            <p className="collections-subtitle">Explore our handcrafted categories</p>
           </div>
-          <div className="occasions-grid">
-            {occasions.map((item) => (
-              <Link to={item.link} className="occasion-card" key={item.name}>
-                <div className="occasion-card__icon">
-                  <item.icon size={24} />
-                </div>
-                <span className="occasion-card__name">{item.name}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* ── 3. Featured Collections ── */}
-      <section className="section section--alt" id="featured-collections">
-        <div className="container">
-          <div className="section-header">
-            <h2>Our Collections</h2>
-            <div className="divider" />
-            <p>Explore our handcrafted categories</p>
-          </div>
           <div className="collections-grid">
             {collections.map((col) => (
-              <Link to={col.link} className="collection-card" key={col.name}>
-                {col.image ? (
-                  <img src={col.image} alt={col.name} className="collection-card__image" />
-                ) : (
-                  <div className="collection-card__placeholder">{col.name}</div>
-                )}
-                <div className="collection-card__overlay">
-                  <h3 className="collection-card__name">{col.name}</h3>
-                  <span className="collection-card__count">{col.count} Products</span>
+              <Link
+                to={col.link}
+                className="collection-tile"
+                key={col.name}
+                id={`collection-${col.name.toLowerCase().replace(/\s/g, '-')}`}
+              >
+                <div className="collection-tile__media">
+                  <img src={col.image} alt={col.name} className="collection-tile__img" />
+                </div>
+                <div className="collection-tile__overlay">
+                  <h3 className="collection-tile__name">{col.name}</h3>
+                  <span className="collection-tile__cta">
+                    Shop Now <ArrowRight size={14} />
+                  </span>
                 </div>
               </Link>
             ))}
@@ -141,111 +88,39 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── 4. Best Sellers ── */}
-      <section className="section" id="best-sellers">
-        <div className="container">
-          <div className="section-header">
-            <h2>Best Sellers</h2>
-            <div className="divider" />
-            <p>Our customers&apos; most loved creations</p>
+      {/* ── Featured Products ── */}
+      <section className="featured-section" id="featured-products">
+        <div className="featured-container">
+          <div className="featured-header">
+            <h2 className="featured-title">Featured Candles</h2>
+            <p className="featured-subtitle">Handcrafted favorites designed for gifting and peaceful moments</p>
           </div>
-          <div className="bestsellers-grid">
-            {bestSellers.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-          <div style={{ textAlign: 'center', marginTop: 'var(--space-xl)' }}>
-            <Link to="/shop" className="btn btn--outline" style={{ marginTop: '2.5rem', display: 'inline-flex' }}>
-              View All Products <ArrowRight size={16} />
-            </Link>
-          </div>
-        </div>
-      </section>
 
-      {/* ── 5. Why Choose Us ── */}
-      <section className="section section--alt" id="why-choose-us">
-        <div className="container">
-          <div className="section-header">
-            <h2>Why Choose Us</h2>
-            <div className="divider" />
-            <p>What makes Wrapped In Love special</p>
-          </div>
-          <div className="why-grid">
-            {whyItems.map((item) => (
-              <div className="why-card" key={item.title}>
-                <div className="why-card__icon">
-                  <item.icon size={26} />
+          <div className="featured-grid">
+            {featuredProducts.map((product) => (
+              <div className="featured-card" key={product.id} id={`featured-product-${product.id}`}>
+                <div className="featured-card__media">
+                  <Link to={`/product/${product.id}`} className="featured-card__link">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="featured-card__img"
+                      loading="lazy"
+                    />
+                  </Link>
                 </div>
-                <h3 className="why-card__title">{item.title}</h3>
-                <p className="why-card__desc">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-
-      {/* ── 8. Instagram ── */}
-      <section className="section" id="instagram-section">
-        <div className="container">
-          <div className="section-header">
-            <h2>Follow Us on Instagram</h2>
-            <div className="divider" />
-            <p>@wrappedinlove_sv — See our latest creations</p>
-          </div>
-          <div className="insta-grid">
-            {instaImages.map((img, i) => (
-              <a
-                href="https://instagram.com/wrappedinlove_sv"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="insta-grid__item"
-                key={i}
-              >
-                <img src={img} alt={`Instagram post ${i + 1}`} />
-              </a>
-            ))}
-          </div>
-          <div className="insta-cta">
-            <a
-              href="https://instagram.com/wrappedinlove_sv"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn--outline"
-            >
-              <InstagramIcon size={16} />
-              Follow @wrappedinlove_sv
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 9. Reviews ── */}
-      <section className="section section--alt" id="reviews-section">
-        <div className="container">
-          <div className="section-header">
-            <h2>What Our Customers Say</h2>
-            <div className="divider" />
-            <p>Real stories from happy gift-givers</p>
-          </div>
-          <div className="reviews-grid">
-            {reviews.map((review) => (
-              <div className="review-card" key={review.id}>
-                <div className="review-card__stars">
-                  {Array.from({ length: review.rating }, (_, i) => (
-                    <Star key={i} size={16} fill="currentColor" />
-                  ))}
-                </div>
-                <p className="review-card__text">&ldquo;{review.text}&rdquo;</p>
-                <div className="review-card__author">
-                  <div className="review-card__avatar">
-                    {review.name.charAt(0)}
-                  </div>
-                  <div>
-                    <div className="review-card__name">{review.name}</div>
-                    <div className="review-card__occasion">{review.occasion}</div>
-                  </div>
+                <div className="featured-card__details">
+                  <h3 className="featured-card__name">
+                    <Link to={`/product/${product.id}`}>{product.name}</Link>
+                  </h3>
+                  <span className="featured-card__price">₹{product.price}</span>
+                  <Link
+                    to={`/product/${product.id}`}
+                    className="btn btn--outline featured-card__btn"
+                    id={`view-product-${product.id}`}
+                  >
+                    View Product
+                  </Link>
                 </div>
               </div>
             ))}
