@@ -3,13 +3,13 @@ import {
   MapPin,
   Phone,
   Mail,
-  Instagram,
   Clock,
   Send,
   CheckCircle,
   MessageCircle,
   Sparkles
 } from 'lucide-react';
+import { InstagramIcon } from '../components/Icons';
 import './Contact.css';
 
 const Contact = () => {
@@ -105,7 +105,7 @@ const Contact = () => {
 
             <div className="contact-card">
               <div className="contact-card__icon">
-                <Instagram size={22} />
+                <InstagramIcon size={22} />
               </div>
               <div>
                 <h3 className="contact-card__title">Follow on Instagram</h3>

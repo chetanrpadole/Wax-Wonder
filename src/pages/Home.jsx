@@ -265,7 +265,7 @@ const Home = () => {
               rel="noopener noreferrer"
               className="btn btn--outline"
             >
-              <Instagram size={16} />
+              <InstagramIcon size={16} />
               Follow @wrappedinlove_sv
             </a>
           </div>
