@@ -10,7 +10,7 @@ import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Collections from './pages/Collections';
 import ProductDetails from './pages/ProductDetails';
-import CustomGifts from './pages/CustomGifts';
+
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
@@ -29,7 +29,7 @@ function App() {
             <Route path="/products" element={<Navigate to="/shop" replace />} />
             <Route path="/collections" element={<Collections />} />
             <Route path="/product/:id" element={<ProductDetails />} />
-            <Route path="/custom-gifts" element={<CustomGifts />} />
+
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />

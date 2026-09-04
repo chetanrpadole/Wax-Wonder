@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   Heart, Gift, Cake, Star, Users, Sparkles,
-  Palette, Package, Award, CheckCircle, ArrowRight,
-  MessageCircle
+  Palette, Package, Award, ArrowRight
 } from 'lucide-react';
 import { InstagramIcon } from '../components/Icons';
 import { products, reviews } from '../data/products';
@@ -16,7 +15,7 @@ import flowerCandle from '../assets/images/flower-candle.jpg';
 import giftHamper from '../assets/images/gift-hamper.jpg';
 import candleBouquet from '../assets/images/candle-bouquet.jpg';
 import giftCandle from '../assets/images/gift-candle.jpg';
-import customGift from '../assets/images/custom-gift.jpg';
+
 
 const occasions = [
   { name: 'Birthday', icon: Cake, link: '/shop?occasion=Birthday+Gifts' },
@@ -33,7 +32,6 @@ const collections = [
   { name: 'Gift Candles', image: giftCandle, count: 3, link: '/shop?category=Gift+Candles' },
   { name: 'Candle Bouquets', image: candleBouquet, count: 2, link: '/shop?category=Candle+Bouquets' },
   { name: 'Gift Hampers', image: giftHamper, count: 2, link: '/shop?category=Gift+Hampers' },
-  { name: 'Custom Gifts', image: customGift, count: 2, link: '/shop?category=Custom+Gifts' },
 ];
 
 const whyItems = [
@@ -73,8 +71,8 @@ const Home = () => {
               <Link to="/shop" className="btn btn--primary">
                 Shop Now <ArrowRight size={16} />
               </Link>
-              <Link to="/custom-gifts" className="btn btn--outline">
-                Custom Gifts
+              <Link to="/collections" className="btn btn--outline">
+                Our Collections
               </Link>
             </div>
           </div>
@@ -186,56 +184,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── 6. Custom Gifts CTA ── */}
-      <section className="section" id="custom-cta">
-        <div className="custom-cta">
-          <Sparkles size={32} style={{ color: 'var(--clr-gold)', marginBottom: '1rem' }} />
-          <h2>Create Something Special</h2>
-          <p>
-            Have a unique gift idea? We&apos;ll bring it to life! Choose your candle, 
-            colors, scent, packaging, and add a personal message.
-          </p>
-          <Link to="/custom-gifts" className="btn btn--primary">
-            Design Your Gift <ArrowRight size={16} />
-          </Link>
-        </div>
-      </section>
 
-      {/* ── 7. Corporate Gifting ── */}
-      <section className="section section--alt" id="corporate-gifting">
-        <div className="container">
-          <div className="corporate">
-            <div className="corporate__content">
-              <h2>Corporate Gifting</h2>
-              <div className="divider" style={{ margin: 'var(--space-sm) 0 var(--space-md)' }} />
-              <p>
-                Make a lasting impression with premium handcrafted gifts for your team, 
-                clients, and partners. Custom branding available.
-              </p>
-              <div className="corporate__list">
-                {['Custom branded packaging', 'Bulk order discounts', 'Employee appreciation gifts', 'Client thank-you hampers', 'Event & wedding favours'].map((item) => (
-                  <div className="corporate__list-item" key={item}>
-                    <CheckCircle size={16} />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-              <a
-                href="https://wa.me/917378670106?text=Hi!%20I%27m%20interested%20in%20corporate%20gifting%20options."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn--primary"
-              >
-                <MessageCircle size={16} />
-                Enquire on WhatsApp
-              </a>
-            </div>
-            <div className="corporate__image">
-              <img src={giftCandle} alt="Corporate gift candles" />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── 8. Instagram ── */}
       <section className="section" id="instagram-section">
