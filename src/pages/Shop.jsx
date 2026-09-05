@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Search, SlidersHorizontal, Sparkles } from 'lucide-react';
 import { products, categories } from '../data/products';
@@ -11,20 +11,10 @@ const Shop = () => {
   const occasionParam = searchParams.get('occasion');
 
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState(categoryParam || 'All');
+  const selectedCategory = categoryParam || 'All';
   const [sortBy, setSortBy] = useState('featured');
 
-  // Sync state when URL params change
-  useEffect(() => {
-    if (categoryParam) {
-      setSelectedCategory(categoryParam);
-    } else {
-      setSelectedCategory('All');
-    }
-  }, [categoryParam]);
-
   const handleCategorySelect = (cat) => {
-    setSelectedCategory(cat);
     if (cat === 'All') {
       searchParams.delete('category');
     } else {
@@ -155,7 +145,7 @@ const Shop = () => {
               type="button"
               className="btn btn--primary btn--sm"
               onClick={() => {
-                setSelectedCategory('All');
+                handleCategorySelect('All');
                 setSearchQuery('');
                 handleClearOccasion();
               }}

@@ -33,6 +33,28 @@ import img31 from '../assets/images/31_christmas_jar.jpg';
 import img32 from '../assets/images/32_santa_candle.jpg';
 import img33 from '../assets/images/33_mandala_tin_jar.jpg';
 import img34 from '../assets/images/34_starfish_candle.jpg';
+import img35 from '../assets/images/Daisy jar big 329.jpeg';
+import img36 from '../assets/images/Daisy pott 499 6 inch.jpeg';
+import img37 from '../assets/images/Heart T light 60(2p).jpeg';
+import img38 from '../assets/images/Hibiscus T light 149 (2p.jpeg';
+import img39 from '../assets/images/Ice cream jar  239.jpeg';
+import img40 from '../assets/images/Lotus Diya 169(6).jpeg';
+import img41 from '../assets/images/Lotus urli 4 inch 269.jpeg';
+import img42 from '../assets/images/Ocean jat candle big jar 199.jpeg';
+import img43 from '../assets/images/Ocean t light 60(2p).jpeg';
+import img44 from '../assets/images/Peacock Urli 399.jpeg';
+import img45 from '../assets/images/Peacock Urli Candle 349.jpeg';
+import img46 from '../assets/images/Plumeriya jar  candle small 199.jpeg';
+import img47 from '../assets/images/Rose Bouquet 399.jpeg';
+import img48 from '../assets/images/Star Fish Candle 299.jpeg';
+import img49 from '../assets/images/Sunflower Peacock urli 429.jpeg';
+import img50 from '../assets/images/Sunflower T-Light 150(2).jpeg';
+import img51 from '../assets/images/Sunflower urli 279.jpeg';
+import img52 from '../assets/images/Teddy T light 149(1).jpeg';
+import img53 from '../assets/images/Tulips Jar 269.jpeg';
+import img54 from '../assets/images/Tulsi Set 229(4).jpeg';
+import img55 from '../assets/images/Water jar candle 299.jpeg';
+import img56 from '../assets/images/Wine candle 369 (1p) 699(2p).jpeg';
 
 export const products = [
   {
@@ -377,6 +399,237 @@ export const products = [
     description: 'Charming coastal starfish candle with delicate seaside texture and breezy marine fragrance.',
     image: img34,
     badge: 'New',
+  },
+  {
+    id: 35,
+    name: 'Daisy Jar Big Candle',
+    price: 329,
+    category: 'Flower Candles',
+    occasion: ['Birthday Gifts', 'Personalized Gifts'],
+    description: 'Generous glass jar candle featuring delicately sculpted daisy petals and a soothing floral aroma.',
+    image: img35,
+    badge: 'Bestseller',
+  },
+  {
+    id: 36,
+    name: 'Daisy Pot Candle',
+    price: 499,
+    unit: '6 inch',
+    category: 'Flower Candles',
+    occasion: ['Anniversary Gifts', 'Festival Gifts'],
+    description: 'Stunning 6-inch artisanal pot candle blooming with intricate handcrafted daisies, bringing cheerful garden radiance indoors.',
+    image: img36,
+    badge: 'New',
+  },
+  {
+    id: 37,
+    name: 'Heart T-Light Candles',
+    price: 60,
+    unit: '2 pcs',
+    category: 'Gift Candles',
+    occasion: ['Anniversary Gifts', 'Personalized Gifts'],
+    description: 'Romantic heart-shaped tea light candles in a charming pair of 2. Ideal for romantic dinners, cozy spaces, and delicate favors.',
+    image: img37,
+    badge: 'New',
+  },
+  {
+    id: 38,
+    name: 'Hibiscus T-Light Candles',
+    price: 149,
+    unit: '2 pcs',
+    category: 'Flower Candles',
+    occasion: ['Festival Gifts', 'Birthday Gifts'],
+    description: 'Artistically detailed hibiscus flower tea light candles in a set of 2, showcasing vivid floral sculpting and gentle fragrance.',
+    image: img38,
+    badge: null,
+  },
+  {
+    id: 39,
+    name: 'Ice Cream Jar Candle',
+    price: 239,
+    category: 'Gift Candles',
+    occasion: ['Birthday Gifts', 'Personalized Gifts'],
+    description: 'Playful and sweet dessert-themed jar candle with waffle & ice cream scoop aesthetic. A delightful treat for candle lovers.',
+    image: img39,
+    badge: 'Bestseller',
+  },
+  {
+    id: 40,
+    name: 'Lotus Diya Candles',
+    price: 169,
+    unit: '6 units',
+    category: 'Festival Collection',
+    occasion: ['Festival Gifts', 'Wedding Favours'],
+    description: 'Traditional lotus petal diya candles in a festive pack of 6. Perfect for Diwali pooja, rangoli decor, and auspicious blessings.',
+    image: img40,
+    badge: 'Bestseller',
+  },
+  {
+    id: 41,
+    name: 'Lotus Urli Candle',
+    price: 269,
+    unit: '4 inch',
+    category: 'Festival Collection',
+    occasion: ['Festival Gifts', 'Corporate Gifts'],
+    description: 'A decorative 4-inch lotus urli candle crafted with pure wax. Creates a tranquil, divine atmosphere in any corner.',
+    image: img41,
+    badge: 'New',
+  },
+  {
+    id: 42,
+    name: 'Ocean Big Jar Candle',
+    price: 199,
+    category: 'Gift Candles',
+    occasion: ['Birthday Gifts', 'Personalized Gifts'],
+    description: 'Serene ocean-inspired large jar candle featuring refreshing sea-breeze fragrance and tranquil coastal vibes.',
+    image: img42,
+    badge: 'New',
+  },
+  {
+    id: 43,
+    name: 'Ocean T-Light Candles',
+    price: 60,
+    unit: '2 pcs',
+    category: 'Gift Candles',
+    occasion: ['Festival Gifts', 'Personalized Gifts'],
+    description: 'Calming ocean-themed tea light candles in a set of 2, infusing delicate coastal serenity into your personal sanctuary.',
+    image: img43,
+    badge: null,
+  },
+  {
+    id: 44,
+    name: 'Royal Peacock Urli Candle',
+    price: 399,
+    category: 'Festival Collection',
+    occasion: ['Festival Gifts', 'Corporate Gifts'],
+    description: 'Grand royal peacock urli decorative candle, handcrafted with majestic motifs for festive centerpieces and auspicious occasions.',
+    image: img44,
+    badge: 'Bestseller',
+  },
+  {
+    id: 45,
+    name: 'Peacock Urli Candle',
+    price: 349,
+    category: 'Festival Collection',
+    occasion: ['Festival Gifts', 'Wedding Favours'],
+    description: 'Artisanal peacock urli candle designed with traditional motifs and clean-burning wax for divine festive celebrations.',
+    image: img45,
+    badge: 'New',
+  },
+  {
+    id: 46,
+    name: 'Plumeria Small Jar Candle',
+    price: 199,
+    unit: 'Small',
+    category: 'Flower Candles',
+    occasion: ['Birthday Gifts', 'Anniversary Gifts'],
+    description: 'Enchanting handcrafted plumeria flower jar candle with soothing tropical floral scent and compact glass jar design.',
+    image: img46,
+    badge: null,
+  },
+  {
+    id: 47,
+    name: 'Rose Candle Bouquet',
+    price: 399,
+    category: 'Candle Bouquets',
+    occasion: ['Anniversary Gifts', 'Birthday Gifts', 'Wedding Favours'],
+    description: 'Everlasting romantic rose candle bouquet featuring sculpted floral blooms wrapped elegantly in luxury gift craft.',
+    image: img47,
+    badge: 'Bestseller',
+  },
+  {
+    id: 48,
+    name: 'Starfish Coastal Candle',
+    price: 299,
+    category: 'Gift Candles',
+    occasion: ['Birthday Gifts', 'Personalized Gifts'],
+    description: 'Sculptural starfish candle textured with marine beach details, hand-poured with natural soy wax and ocean breeze aroma.',
+    image: img48,
+    badge: 'New',
+  },
+  {
+    id: 49,
+    name: 'Sunflower Peacock Urli',
+    price: 429,
+    category: 'Festival Collection',
+    occasion: ['Festival Gifts', 'Corporate Gifts'],
+    description: 'Opulent festive fusion of peacock detailing and bright sunflower blooms in a premium handcrafted urli candle.',
+    image: img49,
+    badge: 'Seasonal',
+  },
+  {
+    id: 50,
+    name: 'Sunflower T-Light Candles',
+    price: 150,
+    unit: '2 pcs',
+    category: 'Flower Candles',
+    occasion: ['Festival Gifts', 'Birthday Gifts'],
+    description: 'Bright and cheerful blooming sunflower tea light candles in a pair of 2, radiating warmth, positivity, and festive energy.',
+    image: img50,
+    badge: 'New',
+  },
+  {
+    id: 51,
+    name: 'Sunflower Urli Candle',
+    price: 279,
+    category: 'Festival Collection',
+    occasion: ['Festival Gifts', 'Wedding Favours'],
+    description: 'Golden sunflower urli candle handcrafted to bring sunlight warmth and festive glow to your home temple or living room.',
+    image: img51,
+    badge: 'New',
+  },
+  {
+    id: 52,
+    name: 'Teddy Bear T-Light Candle',
+    price: 149,
+    unit: '1 pc',
+    category: 'Teddy Candles',
+    occasion: ['Birthday Gifts', 'Personalized Gifts'],
+    description: 'An endearing miniature teddy bear tea light candle hand-poured in velvety wax, cute as a gift or delightful keepsake.',
+    image: img52,
+    badge: 'Bestseller',
+  },
+  {
+    id: 53,
+    name: 'Tulips Jar Candle',
+    price: 269,
+    category: 'Flower Candles',
+    occasion: ['Anniversary Gifts', 'Birthday Gifts'],
+    description: 'Captivating springtime tulip candle encased in a clear glass jar, blending fresh floral aesthetics with serene aromatics.',
+    image: img53,
+    badge: 'New',
+  },
+  {
+    id: 54,
+    name: 'Tulsi Diya Candle Set',
+    price: 229,
+    unit: '4 units',
+    category: 'Festival Collection',
+    occasion: ['Festival Gifts', 'Wedding Favours'],
+    description: 'Sacred Tulsi Vrindavan handcrafted diya candles in a divine set of 4. Ideal for morning pooja, Diwali, and festive rituals.',
+    image: img54,
+    badge: 'Seasonal',
+  },
+  {
+    id: 55,
+    name: 'Water Gel Jar Candle',
+    price: 299,
+    category: 'Gift Candles',
+    occasion: ['Birthday Gifts', 'Personalized Gifts'],
+    description: 'Crystal-clear aquatic gel wax jar candle mimicking shimmering tranquil water, creating a mesmerizing ambient glow.',
+    image: img55,
+    badge: 'New',
+  },
+  {
+    id: 56,
+    name: 'Wine Glass Candle',
+    price: 369,
+    unit: '1 pc (₹699 for 2)',
+    category: 'Gift Candles',
+    occasion: ['Anniversary Gifts', 'Birthday Gifts', 'Personalized Gifts'],
+    description: 'Luxurious wine glass candle poured with deep ruby gel wax and sparkling accents. ₹369 for 1 pc or ₹699 for a pair of 2.',
+    image: img56,
+    badge: 'Bestseller',
   },
 ];
 
