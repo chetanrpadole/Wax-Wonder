@@ -19,23 +19,42 @@ export const CartProvider = ({ children }) => {
     }
   });
 
+  const [lastAddedItem, setLastAddedItem] = useState(null);
+
   useEffect(() => {
     localStorage.setItem('wil-cart', JSON.stringify(items));
   }, [items]);
 
   const addToCart = (product, quantity = 1) => {
+    let finalQty = quantity;
+
     setItems(prev => {
-      const existing = prev.find(item => item.id === product.id);
-      if (existing) {
-        return prev.map(item =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + quantity }
-            : item
-        );
+      const existingIndex = prev.findIndex(item => item.id === product.id);
+      if (existingIndex > -1) {
+        finalQty = prev[existingIndex].quantity + quantity;
+        const next = [...prev];
+        next[existingIndex] = {
+          ...next[existingIndex],
+          quantity: finalQty,
+        };
+        return next;
       }
       return [...prev, { ...product, quantity }];
     });
+
+    setLastAddedItem({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: product.image,
+      unit: product.unit,
+      addedQuantity: quantity,
+      totalQuantity: finalQty,
+      timestamp: Date.now(),
+    });
   };
+
+  const clearLastAddedItem = () => setLastAddedItem(null);
 
   const removeFromCart = (id) => {
     setItems(prev => prev.filter(item => item.id !== id));
@@ -61,7 +80,17 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ items, addToCart, removeFromCart, updateQuantity, clearCart, getTotal, getItemCount }}
+      value={{
+        items,
+        addToCart,
+        removeFromCart,
+        updateQuantity,
+        clearCart,
+        getTotal,
+        getItemCount,
+        lastAddedItem,
+        clearLastAddedItem,
+      }}
     >
       {children}
     </CartContext.Provider>

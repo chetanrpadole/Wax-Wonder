@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Search, ShoppingBag, Menu, X } from 'lucide-react';
+import { Search, ShoppingBag, Menu, X, Check } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import './Navbar.css';
 
@@ -14,7 +14,7 @@ const navLinks = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const { getItemCount } = useCart();
+  const { getItemCount, lastAddedItem, clearLastAddedItem } = useCart();
   const location = useLocation();
   const itemCount = getItemCount();
 
@@ -24,18 +24,55 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on route change
+  // Close mobile menu and dismiss cart preview on route change
   const [prevPath, setPrevPath] = useState(location.pathname);
   if (location.pathname !== prevPath) {
     setPrevPath(location.pathname);
     setMenuOpen(false);
+    if (lastAddedItem) {
+      clearLastAddedItem();
+    }
   }
 
-  // Prevent body scroll when menu is open
+  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
   }, [menuOpen]);
+
+  // Auto-dismiss preview after 4.5 seconds
+  useEffect(() => {
+    if (!lastAddedItem) return;
+
+    const timer = setTimeout(() => {
+      clearLastAddedItem();
+    }, 4500);
+
+    return () => clearTimeout(timer);
+  }, [lastAddedItem, clearLastAddedItem]);
+
+  // Bump badge animation when cart count changes
+  const [prevCount, setPrevCount] = useState(itemCount);
+  const [bumpBadge, setBumpBadge] = useState(false);
+
+  if (itemCount !== prevCount) {
+    setPrevCount(itemCount);
+    setBumpBadge(true);
+  }
+
+  useEffect(() => {
+    if (!bumpBadge) return;
+    const timer = setTimeout(() => setBumpBadge(false), 400);
+    return () => clearTimeout(timer);
+  }, [bumpBadge]);
+
+  const handleClosePreview = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    clearLastAddedItem();
+  };
 
   return (
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`} id="main-navbar">
@@ -68,12 +105,88 @@ const Navbar = () => {
           <Link to="/shop" className="navbar__icon-btn" aria-label="Search products" id="nav-search-btn">
             <Search size={20} />
           </Link>
-          <Link to="/cart" className="navbar__icon-btn" aria-label="Shopping cart" id="nav-cart-btn">
-            <ShoppingBag size={20} />
-            {itemCount > 0 && (
-              <span className="navbar__cart-count">{itemCount}</span>
+
+          {/* Cart Icon with Counter & Live Added-to-Cart Preview */}
+          <div className="navbar__cart-wrap" id="nav-cart-wrapper">
+            <Link
+              to="/cart"
+              className={`navbar__icon-btn ${bumpBadge ? 'navbar__icon-btn--bump' : ''}`}
+              aria-label="Shopping cart"
+              id="nav-cart-btn"
+              onClick={clearLastAddedItem}
+            >
+              <ShoppingBag size={20} />
+              {itemCount > 0 && (
+                <span className={`navbar__cart-count ${bumpBadge ? 'navbar__cart-count--pop' : ''}`} id="nav-cart-counter">
+                  {itemCount}
+                </span>
+              )}
+            </Link>
+
+            {/* Added to Cart Preview Popup */}
+            {lastAddedItem && (
+              <div className="cart-preview" id="cart-added-preview">
+                <div className="cart-preview__arrow" />
+                <div className="cart-preview__header">
+                  <span className="cart-preview__status">
+                    <Check size={14} className="cart-preview__check" /> Added to Cart
+                  </span>
+                  <button
+                    type="button"
+                    className="cart-preview__close"
+                    onClick={handleClosePreview}
+                    aria-label="Close cart preview"
+                  >
+                    <X size={14} />
+                  </button>
+                </div>
+
+                <Link
+                  to="/cart"
+                  className="cart-preview__item"
+                  id="cart-preview-link"
+                  onClick={clearLastAddedItem}
+                >
+                  <div className="cart-preview__img-wrap">
+                    {lastAddedItem.image ? (
+                      <img
+                        src={lastAddedItem.image}
+                        alt={lastAddedItem.name}
+                        className="cart-preview__img"
+                      />
+                    ) : (
+                      <div className="cart-preview__placeholder">
+                        <ShoppingBag size={16} />
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="cart-preview__info">
+                    <h4 className="cart-preview__title">{lastAddedItem.name}</h4>
+                    <div className="cart-preview__meta">
+                      <span className="cart-preview__qty">
+                        Qty: <strong>{lastAddedItem.addedQuantity || 1}</strong>
+                        {lastAddedItem.totalQuantity > 1 && (
+                          <span className="cart-preview__total-qty"> ({lastAddedItem.totalQuantity} in bag)</span>
+                        )}
+                      </span>
+                      <span className="cart-preview__price">₹{lastAddedItem.price}</span>
+                    </div>
+                  </div>
+                </Link>
+
+                <div className="cart-preview__footer">
+                  <Link
+                    to="/cart"
+                    className="cart-preview__btn btn btn--primary btn--sm"
+                    onClick={clearLastAddedItem}
+                  >
+                    View Cart
+                  </Link>
+                </div>
+              </div>
             )}
-          </Link>
+          </div>
 
           {/* Hamburger */}
           <button
