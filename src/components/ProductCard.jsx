@@ -90,6 +90,12 @@ const ProductCard = ({ product }) => {
             </div>
           )}
         </div>
+
+        {qty > 0 && (
+          <Link to="/cart" className="product-card__view-cart">
+            View Cart →
+          </Link>
+        )}
       </div>
     </div>
   );
