@@ -119,6 +119,54 @@
   font-size: 0.8rem;
 }
 
+/* ── Flipkart-style Quantity Stepper ── */
+.qty-stepper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md, 12px);
+  border: 1.5px solid var(--clr-gold-dark, #B8864E);
+  overflow: hidden;
+  height: 36px;
+}
+
+.qty-stepper__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  color: var(--clr-gold-dark, #B8864E);
+  background: transparent;
+  transition: background 0.15s ease, color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.qty-stepper__btn:hover {
+  background: var(--clr-gold-dark, #B8864E);
+  color: #fff;
+}
+
+.qty-stepper__btn--minus:active,
+.qty-stepper__btn--plus:active {
+  transform: scale(0.92);
+}
+
+.qty-stepper__count {
+  flex: 1;
+  text-align: center;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--clr-brown, #3E2723);
+  user-select: none;
+  line-height: 1;
+  min-width: 24px;
+}
+
 /* ── Mobile Optimization ── */
 @media (max-width: 640px) {
   .product-card {
@@ -175,5 +223,23 @@
   .product-card__actions .btn svg {
     width: 12px;
     height: 12px;
+  }
+
+  .qty-stepper {
+    height: 32px;
+    border-radius: var(--radius-sm, 8px);
+  }
+
+  .qty-stepper__btn {
+    width: 28px;
+  }
+
+  .qty-stepper__btn svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .qty-stepper__count {
+    font-size: 0.78rem;
   }
 }

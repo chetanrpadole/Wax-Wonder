@@ -1,16 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingBag } from 'lucide-react';
+import { ShoppingBag, Plus, Minus } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import './ProductCard.css';
 
 const ProductCard = ({ product }) => {
-  const { addToCart } = useCart();
+  const { items, addToCart, updateQuantity } = useCart();
 
-  const handleAddToCart = (e) => {
+  const cartItem = items.find((item) => item.id === product.id);
+  const qty = cartItem ? cartItem.quantity : 0;
+
+  const handleAdd = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    addToCart(product);
+    addToCart(product, 1);
+  };
+
+  const handleIncrement = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    addToCart(product, 1);
+  };
+
+  const handleDecrement = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    updateQuantity(product.id, qty - 1);
   };
 
   return (
@@ -49,10 +64,31 @@ const ProductCard = ({ product }) => {
           <Link to={`/product/${product.id}`} className="btn btn--outline btn--sm">
             View
           </Link>
-          <button className="btn btn--primary btn--sm" onClick={handleAddToCart}>
-            <ShoppingBag size={14} />
-            Add
-          </button>
+
+          {qty === 0 ? (
+            <button className="btn btn--primary btn--sm" onClick={handleAdd}>
+              <ShoppingBag size={14} />
+              Add
+            </button>
+          ) : (
+            <div className="qty-stepper">
+              <button
+                className="qty-stepper__btn qty-stepper__btn--minus"
+                onClick={handleDecrement}
+                aria-label="Decrease quantity"
+              >
+                <Minus size={14} />
+              </button>
+              <span className="qty-stepper__count">{qty}</span>
+              <button
+                className="qty-stepper__btn qty-stepper__btn--plus"
+                onClick={handleIncrement}
+                aria-label="Increase quantity"
+              >
+                <Plus size={14} />
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -60,3 +96,4 @@ const ProductCard = ({ product }) => {
 };
 
 export default ProductCard;
+
