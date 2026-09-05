@@ -311,52 +311,118 @@
 
 @media (max-width: 640px) {
   .product-details {
-    padding: var(--space-md) 0 var(--space-2xl);
+    padding: var(--space-sm) 0 var(--space-2xl);
+  }
+
+  .breadcrumbs {
+    font-size: 0.75rem;
+    margin-bottom: var(--space-md);
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .product-details__layout {
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .product-details__image-box {
+    border-radius: var(--radius-lg, 16px);
+    max-height: 380px;
   }
 
   .product-details__title {
-    font-size: 1.6rem;
+    font-size: 1.45rem;
+    line-height: 1.25;
   }
 
   .product-details__price {
-    font-size: 1.35rem;
-    margin-bottom: var(--space-md);
+    font-size: 1.3rem;
+    margin-bottom: var(--space-sm);
   }
 
-  .product-details__actions {
-    flex-direction: column;
-    align-items: stretch;
+  .product-details__desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-lg);
+  }
+
+  .product-details__occasions {
+    margin-bottom: var(--space-lg);
+  }
+
+  .product-details__highlights {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+    padding: 0.75rem 0.85rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .product-details__highlight-item {
+    font-size: 0.78rem;
+    gap: 6px;
+  }
+
+  .product-details__highlight-item svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .product-details__qty-row {
     gap: var(--space-md);
+    flex-wrap: wrap;
   }
 
-  .product-details__quantity {
-    width: 100%;
-    justify-content: space-between;
+  .quantity-control button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .quantity-control span {
+    width: 36px;
+    font-size: 0.9rem;
   }
 
   .product-details__btn-group {
     flex-direction: column;
     width: 100%;
-    gap: var(--space-sm);
+    gap: 0.6rem;
   }
 
   .product-details__btn-group .btn {
     width: 100%;
     min-width: unset;
-    padding: 0.75rem 1.2rem;
-  }
-
-  .breadcrumbs {
-    font-size: 0.78rem;
-    margin-bottom: var(--space-md);
-    flex-wrap: wrap;
+    padding: 0.8rem 1.2rem;
+    min-height: 44px;
+    font-size: 0.9rem;
   }
 
   .related-section {
-    padding-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    margin-top: var(--space-lg);
   }
 
   .related-section h2 {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
+  }
+
+  .related-section p {
+    font-size: 0.84rem;
+    margin-bottom: var(--space-lg);
+  }
+}
+
+@media (max-width: 380px) {
+  .product-details__title {
+    font-size: 1.3rem;
+  }
+
+  .product-details__price {
+    font-size: 1.2rem;
+  }
+
+  .product-details__highlights {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 }

@@ -117,8 +117,55 @@
   transform: translateX(4px);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
+  .collections-page {
+    padding: 1.25rem 0 2.5rem;
+  }
+
+  .collections-header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .collections-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .collections-header p {
+    font-size: 0.88rem;
+  }
+
   .collections-full-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .collection-item-card {
+    border-radius: var(--radius-lg, 14px);
+  }
+
+  .collection-item-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .collection-item-card:hover .collection-item-card__img {
+    transform: none;
+  }
+
+  .collection-item-card__body {
+    padding: 1rem 1.1rem;
+  }
+
+  .collection-item-card__title {
+    font-size: 1.18rem;
+  }
+
+  .collection-item-card__desc {
+    font-size: 0.84rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .collection-item-card__footer {
+    padding-top: var(--space-sm);
   }
 }
