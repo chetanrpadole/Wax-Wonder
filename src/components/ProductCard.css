@@ -269,3 +269,43 @@
     padding: 0.25rem 0;
   }
 }
+
+@media (max-width: 380px) {
+  .product-card__body {
+    padding: 0.65rem 0.5rem 0.5rem;
+  }
+
+  .product-card__name {
+    font-size: 0.82rem;
+  }
+
+  .product-card__price {
+    font-size: 0.88rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .product-card__actions {
+    gap: 3px;
+  }
+
+  .product-card__actions .btn {
+    padding: 0.4rem 0.25rem;
+    font-size: 0.7rem;
+  }
+
+  .qty-stepper {
+    height: 30px;
+  }
+
+  .qty-stepper__btn {
+    width: 24px;
+  }
+
+  .qty-stepper__count {
+    font-size: 0.74rem;
+  }
+
+  .product-card__view-cart {
+    font-size: 0.68rem;
+  }
+}
