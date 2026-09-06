@@ -192,40 +192,48 @@
 }
 
 @media (max-width: 768px) {
-  /* ── Mobile: compact search/filter card ── */
+  /* ── Mobile: no white card, compact bare layout ── */
   .shop-page {
-    padding: var(--space-lg) 0 var(--space-2xl);
+    padding: var(--space-md) 0 var(--space-2xl);
   }
 
-  /* Compact card: tight padding, column stack */
+  /* Strip the desktop card styling — no background box on mobile */
   .shop-controls {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
     flex-direction: column !important;
     align-items: stretch !important;
     flex-wrap: nowrap !important;
     gap: 10px !important;
-    padding: 10px 14px !important;
-    margin-bottom: 16px !important;
+    padding: 0 !important;
+    margin-bottom: 14px !important;
   }
 
-  /* Search container: full width, no min-width constraint */
+  /* Search bar: standalone full-width pill */
   .shop-search {
     flex: none !important;
     min-width: 0 !important;
     width: 100% !important;
   }
 
-  /* Search input: fixed compact height */
   .shop-search__input {
-    height: 48px !important;
+    height: 50px !important;
     min-height: unset !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
-    padding-left: 2.5rem !important;
-    padding-right: 0.75rem !important;
+    padding-left: 2.6rem !important;
+    padding-right: 0.85rem !important;
+    font-size: 0.9rem !important;
     text-overflow: ellipsis;
+    /* Keep the pill border/bg from desktop — looks clean as a standalone bar */
+    border: 1px solid var(--clr-border) !important;
+    background: var(--clr-bg-card) !important;
+    border-radius: var(--radius-pill) !important;
   }
 
-  /* Sort row: compact horizontal right-aligned control */
+  /* Sort row: compact one-line, right-aligned */
   .shop-sort {
     display: flex !important;
     flex-direction: row !important;
@@ -235,33 +243,39 @@
     width: 100% !important;
   }
 
+  .shop-sort svg {
+    flex-shrink: 0;
+    color: var(--clr-text-light);
+  }
+
   .shop-sort label {
-    font-size: 0.82rem;
+    font-size: 0.82rem !important;
     white-space: nowrap;
     flex-shrink: 0;
     margin: 0 !important;
   }
 
   .shop-sort__select {
-    height: 40px !important;
+    height: 38px !important;
     min-height: unset !important;
     padding: 0 0.75rem !important;
-    font-size: 0.84rem;
+    font-size: 0.84rem !important;
     flex: 1 1 auto;
-    max-width: 175px;
+    max-width: 170px;
     min-width: 0;
+    border-radius: var(--radius-pill) !important;
   }
 
-  /* Category chips: single scrollable row, no wrapping */
+  /* Category chips: single horizontally scrollable row */
   .shop-filters {
     display: flex !important;
     flex-wrap: nowrap !important;
     justify-content: flex-start !important;
     overflow-x: auto !important;
     overflow-y: hidden !important;
-    padding: 4px 0 8px !important;
-    gap: var(--space-xs);
-    margin-bottom: var(--space-lg);
+    padding: 2px 0 8px !important;
+    gap: 8px !important;
+    margin-bottom: var(--space-md) !important;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
@@ -273,8 +287,12 @@
   .shop-filter-btn {
     white-space: nowrap !important;
     flex-shrink: 0 !important;
-    padding: 0.38rem 0.95rem !important;
-    font-size: 0.82rem !important;
+    padding: 0.38rem 0.9rem !important;
+    font-size: 0.81rem !important;
+  }
+
+  .shop-status {
+    margin-bottom: var(--space-md) !important;
   }
 }
 
