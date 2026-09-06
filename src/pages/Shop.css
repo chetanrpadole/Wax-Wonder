@@ -192,36 +192,70 @@
 }
 
 @media (max-width: 768px) {
+  /* ── Mobile: compact search/filter card ── */
   .shop-page {
     padding: var(--space-lg) 0 var(--space-2xl);
   }
 
+  /* Reduce card padding and use a tighter column layout */
   .shop-controls {
     flex-direction: column;
     align-items: stretch;
-    gap: var(--space-sm);
+    gap: 12px;
+    padding: 12px 14px;
+    margin-bottom: var(--space-md);
   }
 
-  .shop-search__input {
-    min-height: 44px;
-  }
-
-  .shop-sort {
-    justify-content: space-between;
+  /* Search bar: full-width, compact height ~48px */
+  .shop-search {
+    min-width: 0;
+    flex: none;
     width: 100%;
   }
 
-  .shop-sort__select {
-    min-height: 40px;
+  .shop-search__input {
+    height: 48px;
+    min-height: unset;
+    padding: 0 1rem 0 2.5rem;
+    font-size: 0.9rem;
+    /* Truncate placeholder gracefully */
+    text-overflow: ellipsis;
   }
 
+  /* Sort row: compact horizontal inline control, right-aligned */
+  .shop-sort {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .shop-sort label {
+    font-size: 0.82rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .shop-sort__select {
+    height: 44px;
+    min-height: unset;
+    padding: 0 0.85rem;
+    font-size: 0.84rem;
+    flex: 1;
+    max-width: 180px;
+  }
+
+  /* Category chips: single horizontally-scrollable row */
   .shop-filters {
     justify-content: flex-start;
     overflow-x: auto;
+    overflow-y: hidden;
     padding: 4px 0 10px;
     flex-wrap: nowrap;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none; /* Firefox */
+    margin-bottom: var(--space-lg);
   }
 
   .shop-filters::-webkit-scrollbar {
@@ -230,9 +264,9 @@
 
   .shop-filter-btn {
     white-space: nowrap;
-    padding: 0.45rem 1rem;
-    font-size: 0.82rem;
     flex-shrink: 0;
+    padding: 0.4rem 1rem;
+    font-size: 0.82rem;
   }
 }
 
