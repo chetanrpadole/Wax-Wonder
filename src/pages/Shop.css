@@ -192,12 +192,32 @@
 }
 
 @media (max-width: 768px) {
-  /* ── Mobile: no white card, compact bare layout ── */
+  /* ── Mobile: compact, no white card ── */
+
+  /* Reduce top page padding from 4rem → 1.5rem */
   .shop-page {
-    padding: var(--space-md) 0 var(--space-2xl);
+    padding: var(--space-lg) 0 var(--space-2xl) !important;
   }
 
-  /* Strip the desktop card styling — no background box on mobile */
+  /* Reduce huge header gap: 4rem → 1.25rem */
+  .shop-header {
+    margin-bottom: 1.25rem !important;
+  }
+
+  .shop-header p {
+    font-size: 0.9rem !important;
+  }
+
+  /* Occasion badge: tighter on mobile */
+  .shop-active-badge {
+    margin-bottom: var(--space-md) !important;
+    font-size: 0.82rem !important;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 6px !important;
+  }
+
+  /* ── Strip the white card entirely on mobile ── */
   .shop-controls {
     background: transparent !important;
     border: none !important;
@@ -206,12 +226,12 @@
     flex-direction: column !important;
     align-items: stretch !important;
     flex-wrap: nowrap !important;
-    gap: 10px !important;
+    gap: 8px !important;
     padding: 0 !important;
-    margin-bottom: 14px !important;
+    margin-bottom: 12px !important;
   }
 
-  /* Search bar: standalone full-width pill */
+  /* Search bar: standalone full-width pill at 50px */
   .shop-search {
     flex: none !important;
     min-width: 0 !important;
@@ -227,41 +247,42 @@
     padding-right: 0.85rem !important;
     font-size: 0.9rem !important;
     text-overflow: ellipsis;
-    /* Keep the pill border/bg from desktop — looks clean as a standalone bar */
     border: 1px solid var(--clr-border) !important;
     background: var(--clr-bg-card) !important;
     border-radius: var(--radius-pill) !important;
   }
 
-  /* Sort row: compact one-line, right-aligned */
+  /* Sort row: compact single line, right-aligned */
   .shop-sort {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-end !important;
-    gap: 8px !important;
+    gap: 6px !important;
     width: 100% !important;
   }
 
   .shop-sort svg {
     flex-shrink: 0;
+    width: 14px !important;
+    height: 14px !important;
     color: var(--clr-text-light);
   }
 
   .shop-sort label {
-    font-size: 0.82rem !important;
+    font-size: 0.8rem !important;
     white-space: nowrap;
     flex-shrink: 0;
     margin: 0 !important;
   }
 
   .shop-sort__select {
-    height: 38px !important;
+    height: 36px !important;
     min-height: unset !important;
-    padding: 0 0.75rem !important;
-    font-size: 0.84rem !important;
+    padding: 0 0.7rem !important;
+    font-size: 0.82rem !important;
     flex: 1 1 auto;
-    max-width: 170px;
+    max-width: 160px;
     min-width: 0;
     border-radius: var(--radius-pill) !important;
   }
@@ -273,8 +294,8 @@
     justify-content: flex-start !important;
     overflow-x: auto !important;
     overflow-y: hidden !important;
-    padding: 2px 0 8px !important;
-    gap: 8px !important;
+    padding: 2px 0 6px !important;
+    gap: 7px !important;
     margin-bottom: var(--space-md) !important;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -287,11 +308,12 @@
   .shop-filter-btn {
     white-space: nowrap !important;
     flex-shrink: 0 !important;
-    padding: 0.38rem 0.9rem !important;
-    font-size: 0.81rem !important;
+    padding: 0.35rem 0.9rem !important;
+    font-size: 0.8rem !important;
   }
 
   .shop-status {
+    font-size: 0.82rem !important;
     margin-bottom: var(--space-md) !important;
   }
 }
