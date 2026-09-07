@@ -478,7 +478,7 @@ export const products = [
   {
     id: 42,
     name: 'Ocean Big Jar Candle',
-    price: 199,
+    price: 149,
     category: 'Gift Candles',
     occasion: ['Birthday Gifts', 'Personalized Gifts'],
     description: 'Serene ocean-inspired large jar candle featuring refreshing sea-breeze fragrance and tranquil coastal vibes.',
