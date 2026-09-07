@@ -60,7 +60,7 @@ export const products = [
   {
     id: 1,
     name: 'Ladoo Candle',
-    price: 149,
+    price: 179,
     unit: '4 units',
     category: 'Festival Collection',
     occasion: ['Festival Gifts', 'Personalized Gifts'],
