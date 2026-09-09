@@ -656,7 +656,7 @@ export const reviews = [
   {
     id: 1,
     name: 'Priya M.',
-    text: 'Ordered a candle bouquet for my best friend\'s birthday and she absolutely loved it! The packaging was beautiful and the candles smelled amazing.',
+    text: 'Ordered a candle bouquet for my best friend\'s birthday and she absolutely loved it! The packaging was beautiful and  candles smelled amazing.',
     rating: 5,
     occasion: 'Birthday Gift',
   },
