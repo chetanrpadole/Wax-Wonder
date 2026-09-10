@@ -684,7 +684,7 @@ export const reviews = [
   {
     id: 5,
     name: 'Meera J.',
-    text: 'The teddy bear candle is the cutest thing ever! It was so well-made that I didn\'t even want to light it. Definitely ordering more.',
+    text: 'The teddy bear candle is the cutest thing ever! It was so well-made that I did not even want to light it. Definitely ordering more.',
     rating: 5,
     occasion: 'Birthday Gift',
   },
