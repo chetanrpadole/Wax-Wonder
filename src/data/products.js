@@ -326,7 +326,7 @@ export const products = [
     price: 449,
     category: 'Gift Candles',
     occasion: ['Anniversary Gifts', 'Corporate Gifts'],
-    description: 'Sophisticated wine-glass candle infused with notes of rich berries and vineyard warmth.',
+    description: 'Sophisticated wine-glass candle infused with notes of rich berries and vineyard warmth it looks so amazing.',
     image: img27,
     badge: null,
   },
