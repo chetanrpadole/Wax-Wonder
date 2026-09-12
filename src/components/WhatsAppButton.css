@@ -69,3 +69,18 @@
     display: none;
   }
 }
+
+@media (max-width: 360px) {
+  .whatsapp-float {
+    bottom: 14px;
+    right: 14px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .whatsapp-float svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+

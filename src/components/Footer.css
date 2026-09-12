@@ -163,10 +163,66 @@
 @media (max-width: 600px) {
   .footer__grid {
     grid-template-columns: 1fr;
-    gap: var(--space-xl);
+    gap: var(--space-lg);
+    padding: 0 var(--space-lg);
   }
 
   .footer {
-    padding: var(--space-2xl) 0 var(--space-lg);
+    padding: var(--space-xl) 0 var(--space-md);
+  }
+
+  .footer__brand-name {
+    font-size: 1.25rem;
+  }
+
+  .footer__brand-desc {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+  }
+
+  .footer__title {
+    font-size: 0.95rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .footer__link {
+    font-size: 0.82rem;
+  }
+
+  .footer__contact-item {
+    font-size: 0.82rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .footer__bottom {
+    margin-top: var(--space-lg);
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+
+  .footer__copyright {
+    font-size: 0.72rem;
   }
 }
+
+@media (max-width: 320px) {
+  .footer__grid {
+    gap: var(--space-md);
+    padding: 0 var(--space-md);
+  }
+
+  .footer {
+    padding: var(--space-lg) 0 var(--space-sm);
+  }
+
+  .footer__brand-name {
+    font-size: 1.1rem;
+  }
+
+  .footer__bottom {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+}
+

@@ -334,4 +334,71 @@
   .shop-grid {
     gap: 0.5rem;
   }
+
+  .shop-search__input {
+    height: 44px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .shop-filter-btn {
+    padding: 0.3rem 0.7rem !important;
+    font-size: 0.74rem !important;
+  }
+
+  .shop-header h1 {
+    font-size: 1.5rem !important;
+  }
 }
+
+@media (max-width: 320px) {
+  .shop-page {
+    padding: var(--space-md) 0 var(--space-lg) !important;
+  }
+
+  .shop-header {
+    margin-bottom: 0.85rem !important;
+  }
+
+  .shop-header h1 {
+    font-size: 1.3rem !important;
+  }
+
+  .shop-header p {
+    font-size: 0.8rem !important;
+  }
+
+  .shop-grid {
+    gap: 0.35rem;
+  }
+
+  .shop-search__input {
+    height: 40px !important;
+    font-size: 0.82rem !important;
+    padding-left: 2.2rem !important;
+  }
+
+  .shop-search svg {
+    left: 10px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .shop-sort label {
+    font-size: 0.72rem !important;
+  }
+
+  .shop-sort__select {
+    height: 32px !important;
+    font-size: 0.76rem !important;
+  }
+
+  .shop-filter-btn {
+    padding: 0.25rem 0.6rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  .shop-status {
+    font-size: 0.74rem !important;
+  }
+}
+

@@ -689,3 +689,58 @@
     padding: 0.5rem 0.6rem;
   }
 }
+
+@media (max-width: 320px) {
+  .navbar__inner {
+    padding: 0.45rem 0.5rem;
+  }
+
+  .navbar--scrolled .navbar__inner {
+    padding: 0.35rem 0.5rem;
+  }
+
+  .navbar__brand-name {
+    font-size: 0.95rem;
+  }
+
+  .navbar__icon-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navbar__icon-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .navbar__hamburger {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navbar__hamburger span {
+    width: 18px;
+  }
+
+  .navbar__actions {
+    gap: 0.15rem;
+  }
+
+  .cart-preview {
+    top: 46px;
+    left: 4px;
+    right: 4px;
+    max-width: 260px;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .cart-preview__title {
+    font-size: 0.75rem;
+  }
+
+  .cart-preview__btn {
+    padding: 0.28rem 0.5rem;
+    font-size: 0.7rem;
+    height: 26px;
+  }
+}

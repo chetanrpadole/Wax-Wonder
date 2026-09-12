@@ -248,7 +248,8 @@
 
   .product-card__actions .btn {
     padding: 0.35rem 0.25rem;
-    height: 29px;
+    height: auto;
+    min-height: 32px;
     font-size: 0.72rem;
     border-radius: var(--radius-sm, 6px);
     gap: 2px;
@@ -323,5 +324,44 @@
 
   .product-card__view-cart {
     font-size: 0.65rem;
+  }
+}
+
+/* ── Smallest Mobile Screens (≤ 320px) ── */
+@media (max-width: 320px) {
+  .product-card__body {
+    padding: 0.35rem 0.35rem 0.4rem;
+  }
+
+  .product-card__name {
+    font-size: 0.7rem;
+  }
+
+  .product-card__price {
+    font-size: 0.76rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .product-card__actions .btn {
+    padding: 0.25rem 0.15rem;
+    font-size: 0.64rem;
+    min-height: 28px;
+  }
+
+  .qty-stepper {
+    height: 26px;
+  }
+
+  .qty-stepper__btn {
+    width: 20px;
+  }
+
+  .qty-stepper__count {
+    font-size: 0.68rem;
+    min-width: 16px;
+  }
+
+  .product-card__view-cart {
+    font-size: 0.6rem;
   }
 }

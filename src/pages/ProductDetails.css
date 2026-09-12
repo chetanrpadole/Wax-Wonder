@@ -426,3 +426,35 @@
     gap: 6px;
   }
 }
+
+@media (max-width: 340px) {
+  .product-details {
+    padding: var(--space-xs) 0 var(--space-xl);
+  }
+
+  .product-details__image-box {
+    max-height: 280px;
+  }
+
+  .product-details__title {
+    font-size: 1.18rem;
+  }
+
+  .product-details__price {
+    font-size: 1.1rem;
+  }
+
+  .product-details__desc {
+    font-size: 0.82rem;
+  }
+
+  .product-details__btn-group .btn {
+    padding: 0.65rem 1rem;
+    font-size: 0.82rem;
+  }
+
+  .related-section h2 {
+    font-size: 1.2rem;
+  }
+}
+
