@@ -1,30 +1,37 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Heart, Sparkles, Leaf, Award, CheckCircle, ArrowRight } from 'lucide-react';
-import giftHamper from '../assets/images/gift-hamper.jpg';
-import candleBouquet from '../assets/images/candle-bouquet.jpg';
-import './About.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  Heart,
+  Sparkles,
+  Leaf,
+  Award,
+  CheckCircle,
+  ArrowRight,
+} from "lucide-react";
+import giftHamper from "../assets/images/gift-hamper.jpg";
+import candleBouquet from "../assets/images/candle-bouquet.jpg";
+import "./About.css";
 
 const values = [
   {
     icon: Heart,
-    title: 'Poured with Devotion',
-    desc: 'Each piece is hand-poured in small batches right here in Nagpur with immense love and meticulous craftsmanship.',
+    title: "Poured with Devotion",
+    desc: "Each piece is hand-poured in small batches right here in Nagpur with immense love and .",
   },
   {
     icon: Leaf,
-    title: 'Earth & Health Kind',
-    desc: 'We strictly use 100% natural, biodegradable soy wax and lead-free cotton wicks for a clean, non-toxic burn.',
+    title: "Earth & Health Kind",
+    desc: "We strictly use 100% natural, biodegradable soy wax and lead-free cotton wicks for a clean, non-toxic burn.",
   },
   {
     icon: Sparkles,
-    title: 'Bespoke Artistry',
-    desc: 'From intimate birthday favors to grandeur wedding hampers, we tailor every detail to your personal story.',
+    title: "Bespoke Artistry",
+    desc: "From intimate birthday favors to grandeur wedding hampers, we tailor every detail to your personal story.",
   },
   {
     icon: Award,
-    title: 'Aesthetic Packaging',
-    desc: 'Unboxing is half the joy. We wrap every order in signature ribbons, elegant boxes, and personal greeting notes.',
+    title: "Aesthetic Packaging",
+    desc: "Unboxing is half the joy. We wrap every order in signature ribbons, elegant boxes, and personal greeting notes.",
   },
 ];
 
@@ -34,13 +41,14 @@ const About = () => {
       <div className="container">
         {/* Header */}
         <header className="about-header">
-          <span className="tag tag--gold" style={{ marginBottom: '0.5rem' }}>
+          <span className="tag tag--gold" style={{ marginBottom: "0.5rem" }}>
             <Sparkles size={13} /> Our Story & Atelier
           </span>
           <h1>About Wrapped In Love</h1>
           <div className="divider" />
           <p>
-            Where artisan candle-making meets heartfelt gifting. Born in the heart of Nagpur.
+            Where artisan candle-making meets heartfelt gifting. Born in the
+            heart of Nagpur.
           </p>
         </header>
 
@@ -49,18 +57,21 @@ const About = () => {
           <div className="about-story__content">
             <h2>Crafting Moments, One Flame at a Time</h2>
             <p>
-              <strong>Wrapped In Love</strong> began with a simple belief: the most meaningful gifts 
-              aren’t mass-produced — they are thoughtfully made, tenderly wrapped, and given with pure warmth.
+              <strong>Wrapped In Love</strong> began with a simple belief: the
+              most meaningful gifts aren’t mass-produced — they are thoughtfully
+              made, tenderly wrapped, and given with pure warmth.
             </p>
             <p>
-              Based in Nagpur, Maharashtra, our studio transforms premium natural soy wax into whimsical 
-              teddy bear candles, delicate flower blossoms, and luxurious gift hampers. What started as a 
-              passion for artisanal craftsmanship has blossomed into a beloved gifting atelier cherished by 
-              hundreds across India.
+              Based in Nagpur, Maharashtra, our studio transforms premium
+              natural soy wax into whimsical teddy bear candles, delicate flower
+              blossoms, and luxurious gift hampers. What started as a passion
+              for artisanal craftsmanship has blossomed into a beloved gifting
+              atelier cherished by hundreds across India.
             </p>
             <p>
-              Whether it is a milestone wedding, a birthday celebration, a festival, or a corporate token of gratitude, 
-              we ensure that every package carries emotional resonance and unforgettable elegance.
+              Whether it is a milestone wedding, a birthday celebration, a
+              festival, or a corporate token of gratitude, we ensure that every
+              package carries emotional resonance and unforgettable elegance.
             </p>
           </div>
 
@@ -71,7 +82,7 @@ const About = () => {
 
         {/* Values */}
         <section className="about-values-section">
-          <div className="container" style={{ padding: '0 1rem' }}>
+          <div className="container" style={{ padding: "0 1rem" }}>
             <div className="section-header">
               <h2>What Guides Us</h2>
               <div className="divider" />
@@ -101,8 +112,9 @@ const About = () => {
           <div className="about-craft__content">
             <h2>The Art Behind Every Creation</h2>
             <p>
-              We believe quality is in the details you cannot always see. That is why our formulations are 
-              crafted without shortcuts or harmful additives.
+              We believe quality is in the details you cannot always see. That
+              is why our formulations are crafted without shortcuts or harmful
+              additives.
             </p>
 
             <div className="about-craft__list">
@@ -110,7 +122,10 @@ const About = () => {
                 <CheckCircle size={22} />
                 <div>
                   <h4>100% Pure Soy Wax</h4>
-                  <p>Renewable, plant-based wax that burns up to 50% longer and cleaner than paraffin.</p>
+                  <p>
+                    Renewable, plant-based wax that burns up to 50% longer and
+                    cleaner than paraffin.
+                  </p>
                 </div>
               </div>
 
@@ -118,7 +133,10 @@ const About = () => {
                 <CheckCircle size={22} />
                 <div>
                   <h4>Phthalate-Free Fragrances</h4>
-                  <p>Artisanal fine scent oils infused with botanical extracts that gently scent your space.</p>
+                  <p>
+                    Artisanal fine scent oils infused with botanical extracts
+                    that gently scent your space.
+                  </p>
                 </div>
               </div>
 
@@ -126,12 +144,22 @@ const About = () => {
                 <CheckCircle size={22} />
                 <div>
                   <h4>Pure Cotton Braided Wicks</h4>
-                  <p>Smoke-free wicks selected specifically for even melt pools and zero lead residue.</p>
+                  <p>
+                    Smoke-free wicks selected specifically for even melt pools
+                    and zero lead residue.
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <div
+              style={{
+                marginTop: "2rem",
+                display: "flex",
+                gap: "1rem",
+                flexWrap: "wrap",
+              }}
+            >
               <Link to="/shop" className="btn btn--primary">
                 Explore The Shop <ArrowRight size={16} />
               </Link>
