@@ -670,7 +670,7 @@ export const reviews = [
   {
     id: 3,
     name: 'Sneha K.',
-    text: 'Ordered 50 mini candle favours for my wedding. They were beautifully made and all my guests loved them. Thank you Wrapped In Love!',
+    text: 'Ordered 50 mini candle favours for my wedding. Thank you Wrapped In Love!',
     rating: 5,
     occasion: 'Wedding Favours',
   },
